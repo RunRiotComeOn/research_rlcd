@@ -1,0 +1,21 @@
+{
+  "rows": 481,
+  "old_correct": 311,
+  "new_correct": 297,
+  "old_accuracy": 0.6465696465696466,
+  "new_accuracy": 0.6174636174636174,
+  "new_minus_old_accuracy": -0.029106029106029108,
+  "accuracy_paired_bootstrap_95pct": [
+    -0.060291060291060294,
+    0.004158004158004158
+  ],
+  "gained_questions": 25,
+  "lost_questions": 39,
+  "old_percent_brier": 0.184181288981289,
+  "new_percent_brier": 0.18835155925155925,
+  "new_minus_old_percent_brier": 0.004170270270270271,
+  "brier_paired_bootstrap_95pct": [
+    -0.007984407484407482,
+    0.016367983367983365
+  ]
+}

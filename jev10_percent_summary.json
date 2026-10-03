@@ -1,0 +1,212 @@
+{
+  "direct": {
+    "sft_baseline_validation": {
+      "rows": 481,
+      "accuracy": 0.6486486486486487,
+      "brier": 0.36927754677754676,
+      "distinct_percentages": 4,
+      "most_common": [
+        [
+          100,
+          343
+        ],
+        [
+          0,
+          92
+        ],
+        [
+          95,
+          45
+        ],
+        [
+          90,
+          1
+        ]
+      ],
+      "deciles": {
+        "0": {
+          "count": 92,
+          "mean_confidence": 0.0,
+          "accuracy": 0.5543478260869565
+        },
+        "9": {
+          "count": 389,
+          "mean_confidence": 0.9939588688946015,
+          "accuracy": 0.6709511568123393
+        }
+      }
+    },
+    "rlcd_step_0100": {
+      "rows": 481,
+      "accuracy": 0.6528066528066528,
+      "brier": 0.3471933471933472,
+      "distinct_percentages": 2,
+      "most_common": [
+        [
+          100,
+          477
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "deciles": {
+        "0": {
+          "count": 4,
+          "mean_confidence": 0.0,
+          "accuracy": 0.5
+        },
+        "9": {
+          "count": 477,
+          "mean_confidence": 1.0,
+          "accuracy": 0.6540880503144654
+        }
+      }
+    },
+    "rlcd_step_0200": {
+      "rows": 481,
+      "accuracy": 0.6507276507276507,
+      "brier": 0.3492723492723493,
+      "distinct_percentages": 1,
+      "most_common": [
+        [
+          100,
+          481
+        ]
+      ],
+      "deciles": {
+        "9": {
+          "count": 481,
+          "mean_confidence": 1.0,
+          "accuracy": 0.6507276507276507
+        }
+      }
+    },
+    "rlcd_step_0300": {
+      "rows": 481,
+      "accuracy": 0.6403326403326404,
+      "brier": 0.3596673596673597,
+      "distinct_percentages": 1,
+      "most_common": [
+        [
+          100,
+          481
+        ]
+      ],
+      "deciles": {
+        "9": {
+          "count": 481,
+          "mean_confidence": 1.0,
+          "accuracy": 0.6403326403326404
+        }
+      }
+    },
+    "old_rlcd_10_bin": {
+      "rows": 481,
+      "accuracy": 0.6486486486486487,
+      "brier": 0.22029625779625783
+    }
+  },
+  "calibrated": {
+    "validation": {
+      "rows": 481,
+      "accuracy": 0.6548856548856549,
+      "percent_brier": 0.18507567567567568,
+      "old_bin_brier": 0.18636694386694386,
+      "distinct_percentages": 69,
+      "deciles": {
+        "2": {
+          "count": 19,
+          "mean_confidence": 0.2768421052631579,
+          "accuracy": 0.3157894736842105
+        },
+        "3": {
+          "count": 62,
+          "mean_confidence": 0.3425806451612903,
+          "accuracy": 0.3709677419354839
+        },
+        "4": {
+          "count": 51,
+          "mean_confidence": 0.4456862745098039,
+          "accuracy": 0.47058823529411764
+        },
+        "5": {
+          "count": 56,
+          "mean_confidence": 0.5382142857142858,
+          "accuracy": 0.5
+        },
+        "6": {
+          "count": 44,
+          "mean_confidence": 0.6511363636363636,
+          "accuracy": 0.6363636363636364
+        },
+        "7": {
+          "count": 65,
+          "mean_confidence": 0.7503076923076923,
+          "accuracy": 0.6923076923076923
+        },
+        "8": {
+          "count": 146,
+          "mean_confidence": 0.8471917808219178,
+          "accuracy": 0.8561643835616438
+        },
+        "9": {
+          "count": 38,
+          "mean_confidence": 0.9094736842105263,
+          "accuracy": 0.9473684210526315
+        }
+      }
+    },
+    "test": {
+      "rows": 481,
+      "accuracy": 0.6340956340956341,
+      "percent_brier": 0.1853960498960499,
+      "old_bin_brier": 0.1850779625779626,
+      "distinct_percentages": 71,
+      "deciles": {
+        "2": {
+          "count": 16,
+          "mean_confidence": 0.2675,
+          "accuracy": 0.25
+        },
+        "3": {
+          "count": 54,
+          "mean_confidence": 0.3340740740740741,
+          "accuracy": 0.2962962962962963
+        },
+        "4": {
+          "count": 49,
+          "mean_confidence": 0.4371428571428571,
+          "accuracy": 0.4897959183673469
+        },
+        "5": {
+          "count": 52,
+          "mean_confidence": 0.545,
+          "accuracy": 0.38461538461538464
+        },
+        "6": {
+          "count": 50,
+          "mean_confidence": 0.6474,
+          "accuracy": 0.54
+        },
+        "7": {
+          "count": 74,
+          "mean_confidence": 0.7572972972972973,
+          "accuracy": 0.6891891891891891
+        },
+        "8": {
+          "count": 142,
+          "mean_confidence": 0.851619718309859,
+          "accuracy": 0.852112676056338
+        },
+        "9": {
+          "count": 44,
+          "mean_confidence": 0.9125,
+          "accuracy": 0.9545454545454546
+        }
+      }
+    }
+  },
+  "note": "Direct RL variants evaluated only on validation; Platt fitted on validation and independently evaluated on test."
+}

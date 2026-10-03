@@ -1,0 +1,77 @@
+{
+  "selected_step_4813_context_validation": {
+    "rows": 481,
+    "accuracy": 0.6528066528066528,
+    "selected_brier": 0.2565548372606614,
+    "multiclass_brier": 0.5754994203675488,
+    "nll": 1.5265314856828818,
+    "mean_label_mass": 0.8541609924325329,
+    "label_mass_below_half": 11
+  },
+  "ce_context_step_0100_validation": {
+    "rows": 481,
+    "accuracy": 0.656964656964657,
+    "selected_brier": 0.26524352514512545,
+    "multiclass_brier": 0.5851409858767886,
+    "nll": 1.6153784665018944,
+    "mean_label_mass": 0.8735292660471308,
+    "label_mass_below_half": 7,
+    "gained_from_baseline": 2,
+    "lost_from_baseline": 0
+  },
+  "ce_context_step_0200_validation": {
+    "rows": 481,
+    "accuracy": 0.6548856548856549,
+    "selected_brier": 0.2723035566314351,
+    "multiclass_brier": 0.5956044920836197,
+    "nll": 1.6691972362190162,
+    "mean_label_mass": 0.8859428809858905,
+    "label_mass_below_half": 6,
+    "gained_from_baseline": 3,
+    "lost_from_baseline": 2
+  },
+  "ce_context_step_0300_validation": {
+    "rows": 481,
+    "accuracy": 0.6486486486486487,
+    "selected_brier": 0.2676114047605527,
+    "multiclass_brier": 0.5890494361725448,
+    "nll": 1.6321618859464249,
+    "mean_label_mass": 0.8795114742619085,
+    "label_mass_below_half": 6,
+    "gained_from_baseline": 2,
+    "lost_from_baseline": 4
+  },
+  "ce_brier_context_step_0100_validation": {
+    "rows": 481,
+    "accuracy": 0.6528066528066528,
+    "selected_brier": 0.26684562394814176,
+    "multiclass_brier": 0.5879042852044033,
+    "nll": 1.6161682673985904,
+    "mean_label_mass": 0.8724366372563487,
+    "label_mass_below_half": 8,
+    "gained_from_baseline": 1,
+    "lost_from_baseline": 1
+  },
+  "ce_brier_context_step_0200_validation": {
+    "rows": 481,
+    "accuracy": 0.6528066528066528,
+    "selected_brier": 0.27102860337241724,
+    "multiclass_brier": 0.5932666897478255,
+    "nll": 1.6688196188883355,
+    "mean_label_mass": 0.8861155700163137,
+    "label_mass_below_half": 6,
+    "gained_from_baseline": 2,
+    "lost_from_baseline": 2
+  },
+  "ce_brier_context_step_0300_validation": {
+    "rows": 481,
+    "accuracy": 0.6528066528066528,
+    "selected_brier": 0.26858596394248807,
+    "multiclass_brier": 0.5907395935468569,
+    "nll": 1.6421468453565393,
+    "mean_label_mass": 0.8835334988492938,
+    "label_mass_below_half": 6,
+    "gained_from_baseline": 3,
+    "lost_from_baseline": 3
+  }
+}

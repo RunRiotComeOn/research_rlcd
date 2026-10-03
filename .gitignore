@@ -1,0 +1,48 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+
+# Machine caches and temporary files
+.cache/
+.tmp/
+*.log
+*.pid
+*.STATUS
+STATUS.txt
+repo_support_files.tar.gz
+
+# Experiment outputs and private source data
+data/
+runs/
+evaluations/
+calibration/
+comparisons/
+logs/
+vendor/
+outputs/
+checkpoints/
+
+# Large media and model files
+*.jsonl
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.mp4
+*.webm
+*.tar
+*.tar.gz
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

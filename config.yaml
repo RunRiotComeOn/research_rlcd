@@ -1,0 +1,28 @@
+seed: 20261001
+model:
+  path: /pfs/siqingyi/code/token_credit/Valen/models/Qwen3.5-2B
+data:
+  train: /pfs/hyx/videojev-rlcd/data/train.jsonl
+  test: /pfs/hyx/videojev-rlcd/data/test.jsonl
+media:
+  max_frames: 4
+  max_pixels: 32768
+  max_prompt_tokens: 4096
+generation:
+  num_generations: 4
+  temperature: 1.0
+  top_p: 0.95
+  max_new_tokens: 24
+  clip_epsilon: 0.2
+  max_grad_norm: 1.0
+reward:
+  calibration_weight: 0.2
+  format_penalty: -1.0
+training:
+  lora_rank: 8
+  learning_rate: 2.0e-5
+  save_every: 50
+  max_examples: null
+evaluation:
+  max_new_tokens: 24
+  calibration_bins: 10
