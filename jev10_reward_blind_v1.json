@@ -1,0 +1,359 @@
+{
+  "protocol": "/pfs/hyx/videojev-rlcd/JEV10_REWARD_20261003_PROTOCOL.md",
+  "data_manifest_sha256": "238bc8f1e9cb8e8d7f0404903a10cefe1db766e593af0942f4ff08771d858a24",
+  "data_sha256": "d4f03196578bad400dba9dc396bd04b7ddb21e8f2e3269419235e9389f195464",
+  "rows": 1000,
+  "video_clusters": 883,
+  "summaries": {
+    "baseline": {
+      "count": 1000,
+      "mode": "baseline",
+      "step": null,
+      "dataset": "blind",
+      "adapter": "/pfs/hyx/videojev-rlcd/runs/jev10_action_sft_v1/checkpoints/step_4813",
+      "correct": 664,
+      "accuracy": 0.664,
+      "direct": {
+        "brier": 0.28968,
+        "ece": 0.2682000000000001,
+        "nll": 0.9368963232647849
+      },
+      "expected": {
+        "brier": 0.23066986348077678,
+        "ece": 0.09881243312358855,
+        "nll": 0.6582234665305517
+      },
+      "mean_reported_confidence": 0.9246,
+      "confidence_bins": {
+        "0": 4,
+        "7": 1,
+        "8": 216,
+        "9": 779
+      },
+      "by_source": {
+        "InternVideo3": {
+          "rows": 326,
+          "accuracy": 0.6533742331288344
+        },
+        "OneThinker-CLEVRER": {
+          "rows": 11,
+          "accuracy": 0.6363636363636364
+        },
+        "OneThinker-Holmes-train": {
+          "rows": 5,
+          "accuracy": 0.2
+        },
+        "OneThinker-LLaVA-Video-178K/2_3_m_academic_v0_1": {
+          "rows": 29,
+          "accuracy": 0.6896551724137931
+        },
+        "OneThinker-NeXT-QA/0_30_s_nextqa": {
+          "rows": 13,
+          "accuracy": 0.6153846153846154
+        },
+        "OneThinker-NeXT-QA/1_2_m_nextqa": {
+          "rows": 10,
+          "accuracy": 0.7
+        },
+        "OneThinker-NeXT-QA/30_60_s_nextqa": {
+          "rows": 16,
+          "accuracy": 0.5625
+        },
+        "OneThinker-STAR": {
+          "rows": 53,
+          "accuracy": 0.5094339622641509
+        },
+        "OneThinker-longvideo-reason": {
+          "rows": 35,
+          "accuracy": 0.7428571428571429
+        },
+        "VSI-Train-10k": {
+          "rows": 11,
+          "accuracy": 0.36363636363636365
+        },
+        "Video-Holmes": {
+          "rows": 25,
+          "accuracy": 0.44
+        },
+        "Video-R1-CLEVRER": {
+          "rows": 9,
+          "accuracy": 0.7777777777777778
+        },
+        "Video-R1-LLaVA-Video-178K/2_3_m_academic_v0_1": {
+          "rows": 20,
+          "accuracy": 0.45
+        },
+        "Video-R1-NeXT-QA/0_30_s_nextqa": {
+          "rows": 9,
+          "accuracy": 0.6666666666666666
+        },
+        "Video-R1-NeXT-QA/1_2_m_nextqa": {
+          "rows": 2,
+          "accuracy": 0.5
+        },
+        "Video-R1-NeXT-QA/30_60_s_nextqa": {
+          "rows": 3,
+          "accuracy": 0.0
+        },
+        "Video-R1-STAR": {
+          "rows": 45,
+          "accuracy": 0.5555555555555556
+        },
+        "VideoChat-R1-NextGQA-test": {
+          "rows": 42,
+          "accuracy": 0.6904761904761905
+        },
+        "VideoChat-R1-NextGQA-val": {
+          "rows": 29,
+          "accuracy": 0.7586206896551724
+        },
+        "longvideo-reason": {
+          "rows": 307,
+          "accuracy": 0.755700325732899
+        }
+      }
+    },
+    "old_brier_step_0300": {
+      "count": 1000,
+      "mode": "old_brier",
+      "step": 300,
+      "dataset": "blind",
+      "adapter": "/pfs/hyx/videojev-rlcd/runs/jev10_reward_old_brier_v2_300/checkpoints/step_0300",
+      "correct": 671,
+      "accuracy": 0.671,
+      "direct": {
+        "brier": 0.26164000000000004,
+        "ece": 0.22600000000000017,
+        "nll": 0.8371744106239957
+      },
+      "expected": {
+        "brier": 0.25801283921238155,
+        "ece": 0.2214027406126261,
+        "nll": 0.8122238858951069
+      },
+      "mean_reported_confidence": 0.8919000000000001,
+      "confidence_bins": {
+        "2": 3,
+        "3": 2,
+        "4": 12,
+        "5": 14,
+        "6": 49,
+        "7": 77,
+        "8": 131,
+        "9": 712
+      },
+      "by_source": {
+        "InternVideo3": {
+          "rows": 326,
+          "accuracy": 0.6717791411042945
+        },
+        "OneThinker-CLEVRER": {
+          "rows": 11,
+          "accuracy": 0.6363636363636364
+        },
+        "OneThinker-Holmes-train": {
+          "rows": 5,
+          "accuracy": 0.2
+        },
+        "OneThinker-LLaVA-Video-178K/2_3_m_academic_v0_1": {
+          "rows": 29,
+          "accuracy": 0.6896551724137931
+        },
+        "OneThinker-NeXT-QA/0_30_s_nextqa": {
+          "rows": 13,
+          "accuracy": 0.6923076923076923
+        },
+        "OneThinker-NeXT-QA/1_2_m_nextqa": {
+          "rows": 10,
+          "accuracy": 0.8
+        },
+        "OneThinker-NeXT-QA/30_60_s_nextqa": {
+          "rows": 16,
+          "accuracy": 0.5625
+        },
+        "OneThinker-STAR": {
+          "rows": 53,
+          "accuracy": 0.6037735849056604
+        },
+        "OneThinker-longvideo-reason": {
+          "rows": 35,
+          "accuracy": 0.7714285714285715
+        },
+        "VSI-Train-10k": {
+          "rows": 11,
+          "accuracy": 0.36363636363636365
+        },
+        "Video-Holmes": {
+          "rows": 25,
+          "accuracy": 0.32
+        },
+        "Video-R1-CLEVRER": {
+          "rows": 9,
+          "accuracy": 0.8888888888888888
+        },
+        "Video-R1-LLaVA-Video-178K/2_3_m_academic_v0_1": {
+          "rows": 20,
+          "accuracy": 0.45
+        },
+        "Video-R1-NeXT-QA/0_30_s_nextqa": {
+          "rows": 9,
+          "accuracy": 0.5555555555555556
+        },
+        "Video-R1-NeXT-QA/1_2_m_nextqa": {
+          "rows": 2,
+          "accuracy": 0.5
+        },
+        "Video-R1-NeXT-QA/30_60_s_nextqa": {
+          "rows": 3,
+          "accuracy": 0.0
+        },
+        "Video-R1-STAR": {
+          "rows": 45,
+          "accuracy": 0.5555555555555556
+        },
+        "VideoChat-R1-NextGQA-test": {
+          "rows": 42,
+          "accuracy": 0.6904761904761905
+        },
+        "VideoChat-R1-NextGQA-val": {
+          "rows": 29,
+          "accuracy": 0.7241379310344828
+        },
+        "longvideo-reason": {
+          "rows": 307,
+          "accuracy": 0.745928338762215
+        }
+      }
+    },
+    "proposed_step_0300": {
+      "count": 1000,
+      "mode": "proposed",
+      "step": 300,
+      "dataset": "blind",
+      "adapter": "/pfs/hyx/videojev-rlcd/runs/jev10_reward_proposed_v2_300/checkpoints/step_0300",
+      "correct": 675,
+      "accuracy": 0.675,
+      "direct": {
+        "brier": 0.22170000000000004,
+        "ece": 0.15370000000000006,
+        "nll": 0.6550611472594526
+      },
+      "expected": {
+        "brier": 0.22134036083487485,
+        "ece": 0.1536395912766457,
+        "nll": 0.6419084753932498
+      },
+      "mean_reported_confidence": 0.8287,
+      "confidence_bins": {
+        "5": 1,
+        "6": 120,
+        "7": 406,
+        "8": 37,
+        "9": 436
+      },
+      "by_source": {
+        "InternVideo3": {
+          "rows": 326,
+          "accuracy": 0.6993865030674846
+        },
+        "OneThinker-CLEVRER": {
+          "rows": 11,
+          "accuracy": 0.7272727272727273
+        },
+        "OneThinker-Holmes-train": {
+          "rows": 5,
+          "accuracy": 0.4
+        },
+        "OneThinker-LLaVA-Video-178K/2_3_m_academic_v0_1": {
+          "rows": 29,
+          "accuracy": 0.6896551724137931
+        },
+        "OneThinker-NeXT-QA/0_30_s_nextqa": {
+          "rows": 13,
+          "accuracy": 0.6923076923076923
+        },
+        "OneThinker-NeXT-QA/1_2_m_nextqa": {
+          "rows": 10,
+          "accuracy": 0.6
+        },
+        "OneThinker-NeXT-QA/30_60_s_nextqa": {
+          "rows": 16,
+          "accuracy": 0.5625
+        },
+        "OneThinker-STAR": {
+          "rows": 53,
+          "accuracy": 0.5660377358490566
+        },
+        "OneThinker-longvideo-reason": {
+          "rows": 35,
+          "accuracy": 0.7714285714285715
+        },
+        "VSI-Train-10k": {
+          "rows": 11,
+          "accuracy": 0.36363636363636365
+        },
+        "Video-Holmes": {
+          "rows": 25,
+          "accuracy": 0.36
+        },
+        "Video-R1-CLEVRER": {
+          "rows": 9,
+          "accuracy": 0.8888888888888888
+        },
+        "Video-R1-LLaVA-Video-178K/2_3_m_academic_v0_1": {
+          "rows": 20,
+          "accuracy": 0.45
+        },
+        "Video-R1-NeXT-QA/0_30_s_nextqa": {
+          "rows": 9,
+          "accuracy": 0.6666666666666666
+        },
+        "Video-R1-NeXT-QA/1_2_m_nextqa": {
+          "rows": 2,
+          "accuracy": 0.5
+        },
+        "Video-R1-NeXT-QA/30_60_s_nextqa": {
+          "rows": 3,
+          "accuracy": 0.3333333333333333
+        },
+        "Video-R1-STAR": {
+          "rows": 45,
+          "accuracy": 0.5555555555555556
+        },
+        "VideoChat-R1-NextGQA-test": {
+          "rows": 42,
+          "accuracy": 0.6904761904761905
+        },
+        "VideoChat-R1-NextGQA-val": {
+          "rows": 29,
+          "accuracy": 0.6896551724137931
+        },
+        "longvideo-reason": {
+          "rows": 307,
+          "accuracy": 0.7296416938110749
+        }
+      }
+    }
+  },
+  "prediction_sha256": {
+    "baseline": "e075301e9420ffff71b0b5fecc4c8d5f49ad89ac165c217312bc239cb3e2ff7a",
+    "old_brier_step_0300": "e0da6eb402f53e809a4b8bd769dc9ab688882969968b57d8505d2ac98ad5d36e",
+    "proposed_step_0300": "c8f9f9d70593f030b45ec681c9ddcb4984a4d74f5c7863b8f0dc33bba88dd0bf"
+  },
+  "proposed_minus_old_accuracy": {
+    "difference": 0.004,
+    "cluster_bootstrap_95pct": [
+      -0.00910010111223458,
+      0.017034068136272545
+    ]
+  },
+  "proposed_minus_old_direct_brier": {
+    "difference": -0.03993999999999999,
+    "cluster_bootstrap_95pct": [
+      -0.05182987141444114,
+      -0.028399209486165995
+    ]
+  },
+  "proposed_gained_questions": 25,
+  "proposed_lost_questions": 21
+}

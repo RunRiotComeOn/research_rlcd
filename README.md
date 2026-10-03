@@ -10,6 +10,8 @@ A later CE+Brier model trained from the base Qwen weights with the corrected tok
 
 The historical RLCD prototype and its original reproduction notes follow below. Later same-source JeV experiments are documented in the `JEV10_*.md` reports.
 
+The [new RLCD reward experiment](JEV10_REWARD_20261003_REPORT.md) compares `y + β(2yq-q²)` with the earlier Brier reward using corrected action tokens. On a separate 1,000-question JeV holdout, it improved directly generated confidence Brier from 0.2616 to 0.2217 with no clear accuracy difference. The existing Platt-calibrated production baseline still had a lower Brier of 0.1744 on those same questions, so the production inference model was not changed.
+
 A video-conditioned Qwen3.5-2B model generates exactly:
 
 ```text

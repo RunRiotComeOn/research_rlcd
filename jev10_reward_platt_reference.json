@@ -1,0 +1,25 @@
+{
+  "calibration": "/pfs/hyx/videojev-rlcd/calibration/jev10_action/selected_step_4813_context/summary.json",
+  "calibration_sha256": "3344facfe2a0cb6bbd6459ae105e31cc21453ca6e7de5c306e921ae1e65d1407",
+  "baseline_predictions_sha256": "e075301e9420ffff71b0b5fecc4c8d5f49ad89ac165c217312bc239cb3e2ff7a",
+  "rows": 1000,
+  "accuracy": 0.664,
+  "production_rounded_percent_brier": 0.1744367,
+  "production_continuous_platt_brier": 0.17436292890162156,
+  "proposed_minus_production_accuracy": {
+    "difference": 0.011,
+    "cluster_bootstrap_95pct": [
+      -0.006012024048096192,
+      0.02814070351758794
+    ]
+  },
+  "proposed_gained_questions": 42,
+  "proposed_lost_questions": 31,
+  "proposed_direct_minus_production_percent_brier": {
+    "difference": 0.047263300000000036,
+    "cluster_bootstrap_95pct": [
+      0.03361864754098364,
+      0.06093016032064132
+    ]
+  }
+}
