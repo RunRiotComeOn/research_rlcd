@@ -1,0 +1,1229 @@
+{
+  "beta020": {
+    "beta": 0.2,
+    "whole_run": {
+      "steps": [
+        1,
+        300
+      ],
+      "mean_reward": 0.8785433333333333,
+      "sampled_correct_rate": 0.7625,
+      "mean_q": 0.8225000000000001,
+      "mean_q_when_correct": 0.8375409836065574,
+      "mean_q_when_wrong": 0.7742105263157896,
+      "sampled_binary_brier": 0.18228333333333335,
+      "mean_reward_std_within_group": 0.10802589294034988,
+      "mean_action_entropy": 0.242538069904161,
+      "mean_digit_entropy": 0.9728254549291968,
+      "mean_grad_norm_when_updated": 10.746575627246337,
+      "updates": 219,
+      "skipped": 81,
+      "group_types": {
+        "mixed": 52,
+        "all_correct": 201,
+        "same_y_confidence_only_updates": 167,
+        "all_wrong": 47
+      },
+      "confidence_advantage_rms_to_correctness_advantage_rms": 0.32036192108151984,
+      "confidence_advantage_energy_share_of_total": 0.05993263069649922,
+      "q_bins": {
+        "0": 2,
+        "1": 4,
+        "2": 6,
+        "3": 4,
+        "4": 25,
+        "5": 37,
+        "6": 112,
+        "7": 264,
+        "8": 277,
+        "9": 469
+      }
+    },
+    "windows_25": [
+      {
+        "steps": [
+          1,
+          25
+        ],
+        "mean_reward": 0.77862,
+        "sampled_correct_rate": 0.69,
+        "mean_q": 0.8350000000000002,
+        "mean_q_when_correct": 0.8442028985507247,
+        "mean_q_when_wrong": 0.8145161290322582,
+        "sampled_binary_brier": 0.2469,
+        "mean_reward_std_within_group": 0.23402472433634103,
+        "mean_action_entropy": 0.5878765225410462,
+        "mean_digit_entropy": 1.3810593601067862,
+        "mean_grad_norm_when_updated": 8.343158564763144,
+        "updates": 24,
+        "skipped": 1,
+        "group_types": {
+          "mixed": 9,
+          "all_correct": 13,
+          "same_y_confidence_only_updates": 15,
+          "all_wrong": 3
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.35540435853336994,
+        "confidence_advantage_energy_share_of_total": 0.06983845238468936,
+        "q_bins": {
+          "0": 2,
+          "1": 1,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 1,
+          "6": 0,
+          "7": 16,
+          "8": 48,
+          "9": 31
+        }
+      },
+      {
+        "steps": [
+          26,
+          50
+        ],
+        "mean_reward": 0.78766,
+        "sampled_correct_rate": 0.69,
+        "mean_q": 0.767,
+        "mean_q_when_correct": 0.7978260869565218,
+        "mean_q_when_wrong": 0.6983870967741936,
+        "sampled_binary_brier": 0.20170000000000002,
+        "mean_reward_std_within_group": 0.25923649658448994,
+        "mean_action_entropy": 0.44317991226911546,
+        "mean_digit_entropy": 1.5338287023703256,
+        "mean_grad_norm_when_updated": 13.656340014866807,
+        "updates": 22,
+        "skipped": 3,
+        "group_types": {
+          "all_correct": 11,
+          "same_y_confidence_only_updates": 11,
+          "mixed": 11,
+          "all_wrong": 3
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.2986644557741298,
+        "confidence_advantage_energy_share_of_total": 0.05362628640591257,
+        "q_bins": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 5,
+          "5": 5,
+          "6": 12,
+          "7": 33,
+          "8": 21,
+          "9": 22
+        }
+      },
+      {
+        "steps": [
+          51,
+          75
+        ],
+        "mean_reward": 0.87222,
+        "sampled_correct_rate": 0.76,
+        "mean_q": 0.857,
+        "mean_q_when_correct": 0.8605263157894738,
+        "mean_q_when_wrong": 0.8458333333333333,
+        "sampled_binary_brier": 0.1989,
+        "mean_reward_std_within_group": 0.1031826444528997,
+        "mean_action_entropy": 0.2958532118052244,
+        "mean_digit_entropy": 1.072748416662216,
+        "mean_grad_norm_when_updated": 5.959226232699373,
+        "updates": 22,
+        "skipped": 3,
+        "group_types": {
+          "all_correct": 17,
+          "same_y_confidence_only_updates": 18,
+          "all_wrong": 4,
+          "mixed": 4
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.36461852211135226,
+        "confidence_advantage_energy_share_of_total": 0.0729028814587888,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 1,
+          "5": 0,
+          "6": 6,
+          "7": 16,
+          "8": 32,
+          "9": 44
+        }
+      },
+      {
+        "steps": [
+          76,
+          100
+        ],
+        "mean_reward": 0.9673,
+        "sampled_correct_rate": 0.83,
+        "mean_q": 0.8340000000000001,
+        "mean_q_when_correct": 0.8379518072289158,
+        "mean_q_when_wrong": 0.8147058823529413,
+        "sampled_binary_brier": 0.1435,
+        "mean_reward_std_within_group": 0.03036605768837035,
+        "mean_action_entropy": 0.16078626945614816,
+        "mean_digit_entropy": 1.1397212433815003,
+        "mean_grad_norm_when_updated": 1.4454061355103145,
+        "updates": 22,
+        "skipped": 3,
+        "group_types": {
+          "all_correct": 20,
+          "same_y_confidence_only_updates": 21,
+          "all_wrong": 4,
+          "mixed": 1
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.3328503167090778,
+        "confidence_advantage_energy_share_of_total": 0.06435792337029433,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 9,
+          "7": 21,
+          "8": 43,
+          "9": 26
+        }
+      },
+      {
+        "steps": [
+          101,
+          125
+        ],
+        "mean_reward": 0.70974,
+        "sampled_correct_rate": 0.63,
+        "mean_q": 0.7070000000000001,
+        "mean_q_when_correct": 0.7325396825396826,
+        "mean_q_when_wrong": 0.6635135135135136,
+        "sampled_binary_brier": 0.23130000000000003,
+        "mean_reward_std_within_group": 0.18479555904865264,
+        "mean_action_entropy": 0.3308784222602844,
+        "mean_digit_entropy": 1.109552600781123,
+        "mean_grad_norm_when_updated": 23.62556084211577,
+        "updates": 22,
+        "skipped": 3,
+        "group_types": {
+          "all_correct": 11,
+          "all_wrong": 6,
+          "same_y_confidence_only_updates": 14,
+          "mixed": 8
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.2649341050148131,
+        "confidence_advantage_energy_share_of_total": 0.04447955770272771,
+        "q_bins": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 7,
+          "5": 15,
+          "6": 18,
+          "7": 33,
+          "8": 13,
+          "9": 12
+        }
+      },
+      {
+        "steps": [
+          126,
+          150
+        ],
+        "mean_reward": 0.97898,
+        "sampled_correct_rate": 0.84,
+        "mean_q": 0.7420000000000002,
+        "mean_q_when_correct": 0.7464285714285716,
+        "mean_q_when_wrong": 0.7187500000000001,
+        "sampled_binary_brier": 0.14509999999999998,
+        "mean_reward_std_within_group": 0.006426649894565344,
+        "mean_action_entropy": 0.137200132496655,
+        "mean_digit_entropy": 1.09326345205307,
+        "mean_grad_norm_when_updated": 0.32236317582428453,
+        "updates": 20,
+        "skipped": 5,
+        "group_types": {
+          "all_correct": 21,
+          "same_y_confidence_only_updates": 20,
+          "all_wrong": 4
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": null,
+        "confidence_advantage_energy_share_of_total": 1.0,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 4,
+          "6": 25,
+          "7": 46,
+          "8": 20,
+          "9": 4
+        }
+      },
+      {
+        "steps": [
+          151,
+          175
+        ],
+        "mean_reward": 0.98098,
+        "sampled_correct_rate": 0.84,
+        "mean_q": 0.787,
+        "mean_q_when_correct": 0.7976190476190478,
+        "mean_q_when_wrong": 0.7312500000000001,
+        "sampled_binary_brier": 0.1351,
+        "mean_reward_std_within_group": 0.07612107045017183,
+        "mean_action_entropy": 0.23682869978249074,
+        "mean_digit_entropy": 1.128334983587265,
+        "mean_grad_norm_when_updated": 6.580864325165749,
+        "updates": 23,
+        "skipped": 2,
+        "group_types": {
+          "all_correct": 20,
+          "same_y_confidence_only_updates": 20,
+          "all_wrong": 2,
+          "mixed": 3
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.3124330328246359,
+        "confidence_advantage_energy_share_of_total": 0.057419748915068056,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 5,
+          "5": 2,
+          "6": 11,
+          "7": 35,
+          "8": 27,
+          "9": 20
+        }
+      },
+      {
+        "steps": [
+          176,
+          200
+        ],
+        "mean_reward": 0.96842,
+        "sampled_correct_rate": 0.83,
+        "mean_q": 0.8380000000000001,
+        "mean_q_when_correct": 0.8596385542168675,
+        "mean_q_when_wrong": 0.7323529411764707,
+        "sampled_binary_brier": 0.13790000000000002,
+        "mean_reward_std_within_group": 0.12155111465603113,
+        "mean_action_entropy": 0.194871126152575,
+        "mean_digit_entropy": 0.8931687660515308,
+        "mean_grad_norm_when_updated": 17.58470446476713,
+        "updates": 16,
+        "skipped": 9,
+        "group_types": {
+          "all_correct": 18,
+          "same_y_confidence_only_updates": 11,
+          "all_wrong": 2,
+          "mixed": 5
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.326276774124873,
+        "confidence_advantage_energy_share_of_total": 0.061900895799362796,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 3,
+          "3": 3,
+          "4": 2,
+          "5": 2,
+          "6": 6,
+          "7": 12,
+          "8": 13,
+          "9": 59
+        }
+      },
+      {
+        "steps": [
+          201,
+          225
+        ],
+        "mean_reward": 1.03542,
+        "sampled_correct_rate": 0.88,
+        "mean_q": 0.92,
+        "mean_q_when_correct": 0.9272727272727274,
+        "mean_q_when_wrong": 0.8666666666666667,
+        "sampled_binary_brier": 0.1029,
+        "mean_reward_std_within_group": 0.05036570273339749,
+        "mean_action_entropy": 0.08302329413592816,
+        "mean_digit_entropy": 0.35092059839516876,
+        "mean_grad_norm_when_updated": 14.972909823805093,
+        "updates": 10,
+        "skipped": 15,
+        "group_types": {
+          "all_correct": 21,
+          "same_y_confidence_only_updates": 8,
+          "mixed": 2,
+          "all_wrong": 2
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.3679492718659282,
+        "confidence_advantage_energy_share_of_total": 0.0737111082073842,
+        "q_bins": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 4,
+          "8": 14,
+          "9": 81
+        }
+      },
+      {
+        "steps": [
+          226,
+          250
+        ],
+        "mean_reward": 0.70922,
+        "sampled_correct_rate": 0.64,
+        "mean_q": 0.9150000000000001,
+        "mean_q_when_correct": 0.9281250000000001,
+        "mean_q_when_wrong": 0.8916666666666667,
+        "sampled_binary_brier": 0.29390000000000005,
+        "mean_reward_std_within_group": 0.00457362623885274,
+        "mean_action_entropy": 0.163101000636816,
+        "mean_digit_entropy": 0.5278036421723664,
+        "mean_grad_norm_when_updated": 0.6340682018134329,
+        "updates": 9,
+        "skipped": 16,
+        "group_types": {
+          "all_correct": 16,
+          "same_y_confidence_only_updates": 9,
+          "all_wrong": 9
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": null,
+        "confidence_advantage_energy_share_of_total": 1.0,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 1,
+          "7": 9,
+          "8": 14,
+          "9": 76
+        }
+      },
+      {
+        "steps": [
+          251,
+          275
+        ],
+        "mean_reward": 0.9589,
+        "sampled_correct_rate": 0.82,
+        "mean_q": 0.8600000000000001,
+        "mean_q_when_correct": 0.8817073170731708,
+        "mean_q_when_wrong": 0.7611111111111113,
+        "sampled_binary_brier": 0.12550000000000003,
+        "mean_reward_std_within_group": 0.10231992159038782,
+        "mean_action_entropy": 0.129611305706203,
+        "mean_digit_entropy": 0.6539747619722038,
+        "mean_grad_norm_when_updated": 20.484579884580203,
+        "updates": 14,
+        "skipped": 11,
+        "group_types": {
+          "all_wrong": 3,
+          "same_y_confidence_only_updates": 10,
+          "mixed": 4,
+          "all_correct": 18
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.320996662198935,
+        "confidence_advantage_energy_share_of_total": 0.05926993825103099,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 1,
+          "6": 5,
+          "7": 24,
+          "8": 18,
+          "9": 51
+        }
+      },
+      {
+        "steps": [
+          276,
+          300
+        ],
+        "mean_reward": 0.79506,
+        "sampled_correct_rate": 0.7,
+        "mean_q": 0.8080000000000002,
+        "mean_q_when_correct": 0.822857142857143,
+        "mean_q_when_wrong": 0.7733333333333334,
+        "sampled_binary_brier": 0.2247,
+        "mean_reward_std_within_group": 0.12334714761003852,
+        "mean_action_entropy": 0.14724694160744548,
+        "mean_digit_entropy": 0.7895289316168055,
+        "mean_grad_norm_when_updated": 19.251885399222374,
+        "updates": 15,
+        "skipped": 10,
+        "group_types": {
+          "all_wrong": 5,
+          "same_y_confidence_only_updates": 10,
+          "all_correct": 15,
+          "mixed": 5
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.3083131524927213,
+        "confidence_advantage_energy_share_of_total": 0.05639500770368489,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 1,
+          "3": 0,
+          "4": 2,
+          "5": 6,
+          "6": 19,
+          "7": 15,
+          "8": 14,
+          "9": 43
+        }
+      }
+    ],
+    "windows_100": [
+      {
+        "steps": [
+          1,
+          100
+        ],
+        "mean_reward": 0.8514499999999999,
+        "sampled_correct_rate": 0.7425,
+        "mean_q": 0.82325,
+        "mean_q_when_correct": 0.835858585858586,
+        "mean_q_when_wrong": 0.7868932038834953,
+        "sampled_binary_brier": 0.19775,
+        "mean_reward_std_within_group": 0.15670248076552526,
+        "mean_action_entropy": 0.37192397901788354,
+        "mean_digit_entropy": 1.281839430630207,
+        "mean_grad_norm_when_updated": 7.373079977577759,
+        "updates": 90,
+        "skipped": 10,
+        "group_types": {
+          "mixed": 25,
+          "all_correct": 61,
+          "same_y_confidence_only_updates": 65,
+          "all_wrong": 14
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.3326924208838853,
+        "confidence_advantage_energy_share_of_total": 0.06343456307971428,
+        "q_bins": {
+          "0": 2,
+          "1": 2,
+          "2": 1,
+          "3": 1,
+          "4": 7,
+          "5": 7,
+          "6": 27,
+          "7": 86,
+          "8": 144,
+          "9": 123
+        }
+      },
+      {
+        "steps": [
+          101,
+          200
+        ],
+        "mean_reward": 0.9095300000000001,
+        "sampled_correct_rate": 0.785,
+        "mean_q": 0.7685000000000001,
+        "mean_q_when_correct": 0.7872611464968153,
+        "mean_q_when_wrong": 0.7000000000000001,
+        "sampled_binary_brier": 0.16235,
+        "mean_reward_std_within_group": 0.09722359851235524,
+        "mean_action_entropy": 0.22494459517300128,
+        "mean_digit_entropy": 1.0560799506182472,
+        "mean_grad_norm_when_updated": 11.838577197013814,
+        "updates": 81,
+        "skipped": 19,
+        "group_types": {
+          "all_correct": 70,
+          "all_wrong": 14,
+          "same_y_confidence_only_updates": 65,
+          "mixed": 16
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.2953522642540599,
+        "confidence_advantage_energy_share_of_total": 0.05300875840503342,
+        "q_bins": {
+          "0": 0,
+          "1": 1,
+          "2": 4,
+          "3": 3,
+          "4": 15,
+          "5": 23,
+          "6": 60,
+          "7": 126,
+          "8": 73,
+          "9": 95
+        }
+      },
+      {
+        "steps": [
+          201,
+          300
+        ],
+        "mean_reward": 0.87465,
+        "sampled_correct_rate": 0.76,
+        "mean_q": 0.87575,
+        "mean_q_when_correct": 0.8911184210526317,
+        "mean_q_when_wrong": 0.8270833333333334,
+        "sampled_binary_brier": 0.18675,
+        "mean_reward_std_within_group": 0.07015159954316914,
+        "mean_action_entropy": 0.13074563552159815,
+        "mean_digit_entropy": 0.5805569835391361,
+        "mean_grad_norm_when_updated": 15.229127321392298,
+        "updates": 48,
+        "skipped": 52,
+        "group_types": {
+          "all_correct": 70,
+          "same_y_confidence_only_updates": 37,
+          "mixed": 11,
+          "all_wrong": 19
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.32542416764722454,
+        "confidence_advantage_energy_share_of_total": 0.06113151162829481,
+        "q_bins": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 3,
+          "5": 7,
+          "6": 25,
+          "7": 52,
+          "8": 60,
+          "9": 251
+        }
+      }
+    ]
+  },
+  "beta040": {
+    "beta": 0.4,
+    "whole_run": {
+      "steps": [
+        1,
+        300
+      ],
+      "mean_reward": 0.9871466666666667,
+      "sampled_correct_rate": 0.7583333333333333,
+      "mean_q": 0.8536666666666668,
+      "mean_q_when_correct": 0.8703296703296705,
+      "mean_q_when_wrong": 0.8013793103448277,
+      "sampled_binary_brier": 0.18630000000000002,
+      "mean_reward_std_within_group": 0.13234492856931562,
+      "mean_action_entropy": 0.23759456996961187,
+      "mean_digit_entropy": 0.781205109911324,
+      "mean_grad_norm_when_updated": 13.322323872122107,
+      "updates": 194,
+      "skipped": 106,
+      "group_types": {
+        "mixed": 50,
+        "all_correct": 201,
+        "same_y_confidence_only_updates": 144,
+        "all_wrong": 49
+      },
+      "confidence_advantage_rms_to_correctness_advantage_rms": 0.6487598045121301,
+      "confidence_advantage_energy_share_of_total": 0.15800023610103445,
+      "q_bins": {
+        "0": 2,
+        "1": 4,
+        "2": 9,
+        "3": 10,
+        "4": 16,
+        "5": 17,
+        "6": 50,
+        "7": 197,
+        "8": 291,
+        "9": 604
+      }
+    },
+    "windows_25": [
+      {
+        "steps": [
+          1,
+          25
+        ],
+        "mean_reward": 0.8668399999999999,
+        "sampled_correct_rate": 0.69,
+        "mean_q": 0.8370000000000001,
+        "mean_q_when_correct": 0.8456521739130436,
+        "mean_q_when_wrong": 0.817741935483871,
+        "sampled_binary_brier": 0.24790000000000004,
+        "mean_reward_std_within_group": 0.30169295851141215,
+        "mean_action_entropy": 0.5887229758501052,
+        "mean_digit_entropy": 1.3853570346037545,
+        "mean_grad_norm_when_updated": 10.94934024910132,
+        "updates": 24,
+        "skipped": 1,
+        "group_types": {
+          "mixed": 9,
+          "all_correct": 13,
+          "same_y_confidence_only_updates": 15,
+          "all_wrong": 3
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.7115620254967464,
+        "confidence_advantage_energy_share_of_total": 0.17635895828059925,
+        "q_bins": {
+          "0": 2,
+          "1": 1,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 0,
+          "6": 1,
+          "7": 16,
+          "8": 47,
+          "9": 32
+        }
+      },
+      {
+        "steps": [
+          26,
+          50
+        ],
+        "mean_reward": 0.8833199999999999,
+        "sampled_correct_rate": 0.69,
+        "mean_q": 0.7810000000000001,
+        "mean_q_when_correct": 0.8094202898550726,
+        "mean_q_when_wrong": 0.7177419354838711,
+        "sampled_binary_brier": 0.20670000000000002,
+        "mean_reward_std_within_group": 0.32240308917127547,
+        "mean_action_entropy": 0.443750931173563,
+        "mean_digit_entropy": 1.465892811616262,
+        "mean_grad_norm_when_updated": 17.004659584808078,
+        "updates": 22,
+        "skipped": 3,
+        "group_types": {
+          "all_correct": 11,
+          "same_y_confidence_only_updates": 11,
+          "mixed": 11,
+          "all_wrong": 3
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.6043665869557743,
+        "confidence_advantage_energy_share_of_total": 0.14444606747098077,
+        "q_bins": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 4,
+          "5": 5,
+          "6": 9,
+          "7": 31,
+          "8": 25,
+          "9": 24
+        }
+      },
+      {
+        "steps": [
+          51,
+          75
+        ],
+        "mean_reward": 0.98356,
+        "sampled_correct_rate": 0.76,
+        "mean_q": 0.8930000000000001,
+        "mean_q_when_correct": 0.9,
+        "mean_q_when_wrong": 0.8708333333333335,
+        "sampled_binary_brier": 0.20110000000000003,
+        "mean_reward_std_within_group": 0.13356323826126754,
+        "mean_action_entropy": 0.2697610243409872,
+        "mean_digit_entropy": 0.7063765722513199,
+        "mean_grad_norm_when_updated": 10.010179392579529,
+        "updates": 18,
+        "skipped": 7,
+        "group_types": {
+          "all_correct": 17,
+          "same_y_confidence_only_updates": 14,
+          "all_wrong": 4,
+          "mixed": 4
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.737878038702874,
+        "confidence_advantage_energy_share_of_total": 0.18416053772344268,
+        "q_bins": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 1,
+          "7": 9,
+          "8": 24,
+          "9": 64
+        }
+      },
+      {
+        "steps": [
+          76,
+          100
+        ],
+        "mean_reward": 1.10132,
+        "sampled_correct_rate": 0.83,
+        "mean_q": 0.8980000000000001,
+        "mean_q_when_correct": 0.9006024096385542,
+        "mean_q_when_wrong": 0.8852941176470589,
+        "sampled_binary_brier": 0.1517,
+        "mean_reward_std_within_group": 0.04200902692973614,
+        "mean_action_entropy": 0.15897660255432128,
+        "mean_digit_entropy": 0.7015014892816543,
+        "mean_grad_norm_when_updated": 2.443438697606325,
+        "updates": 18,
+        "skipped": 7,
+        "group_types": {
+          "all_correct": 20,
+          "same_y_confidence_only_updates": 17,
+          "all_wrong": 4,
+          "mixed": 1
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.7070238091229085,
+        "confidence_advantage_energy_share_of_total": 0.182981016266194,
+        "q_bins": {
+          "0": 0,
+          "1": 1,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 11,
+          "8": 22,
+          "9": 66
+        }
+      },
+      {
+        "steps": [
+          101,
+          125
+        ],
+        "mean_reward": 0.745,
+        "sampled_correct_rate": 0.61,
+        "mean_q": 0.809,
+        "mean_q_when_correct": 0.8237704918032788,
+        "mean_q_when_wrong": 0.785897435897436,
+        "sampled_binary_brier": 0.2725,
+        "mean_reward_std_within_group": 0.24635265749879182,
+        "mean_action_entropy": 0.34078943833708764,
+        "mean_digit_entropy": 0.9381115424633026,
+        "mean_grad_norm_when_updated": 29.728368593946747,
+        "updates": 23,
+        "skipped": 2,
+        "group_types": {
+          "all_correct": 11,
+          "same_y_confidence_only_updates": 15,
+          "all_wrong": 6,
+          "mixed": 8
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.6130395431629853,
+        "confidence_advantage_energy_share_of_total": 0.14603660586567044,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 1,
+          "3": 0,
+          "4": 1,
+          "5": 1,
+          "6": 10,
+          "7": 27,
+          "8": 41,
+          "9": 19
+        }
+      },
+      {
+        "steps": [
+          126,
+          150
+        ],
+        "mean_reward": 1.1350799999999999,
+        "sampled_correct_rate": 0.85,
+        "mean_q": 0.7660000000000001,
+        "mean_q_when_correct": 0.7711764705882355,
+        "mean_q_when_wrong": 0.7366666666666667,
+        "sampled_binary_brier": 0.13729999999999998,
+        "mean_reward_std_within_group": 0.14276934743858874,
+        "mean_action_entropy": 0.15896060951054097,
+        "mean_digit_entropy": 0.9138634610176086,
+        "mean_grad_norm_when_updated": 7.300346742783274,
+        "updates": 21,
+        "skipped": 4,
+        "group_types": {
+          "all_correct": 19,
+          "same_y_confidence_only_updates": 16,
+          "mixed": 5,
+          "all_wrong": 1
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.5676505967582525,
+        "confidence_advantage_energy_share_of_total": 0.13298538291274647,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 3,
+          "5": 2,
+          "6": 12,
+          "7": 42,
+          "8": 35,
+          "9": 5
+        }
+      },
+      {
+        "steps": [
+          151,
+          175
+        ],
+        "mean_reward": 1.09388,
+        "sampled_correct_rate": 0.82,
+        "mean_q": 0.8390000000000001,
+        "mean_q_when_correct": 0.851219512195122,
+        "mean_q_when_wrong": 0.7833333333333334,
+        "sampled_binary_brier": 0.1353,
+        "mean_reward_std_within_group": 0.1276862235274166,
+        "mean_action_entropy": 0.25646358013153076,
+        "mean_digit_entropy": 0.7827511346340179,
+        "mean_grad_norm_when_updated": 15.470379463936153,
+        "updates": 19,
+        "skipped": 6,
+        "group_types": {
+          "all_correct": 18,
+          "all_wrong": 3,
+          "same_y_confidence_only_updates": 15,
+          "mixed": 4
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.6311676254598073,
+        "confidence_advantage_energy_share_of_total": 0.15027574004904345,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 1,
+          "6": 4,
+          "7": 25,
+          "8": 45,
+          "9": 25
+        }
+      },
+      {
+        "steps": [
+          176,
+          200
+        ],
+        "mean_reward": 1.06172,
+        "sampled_correct_rate": 0.8,
+        "mean_q": 0.8800000000000001,
+        "mean_q_when_correct": 0.9025000000000001,
+        "mean_q_when_wrong": 0.7900000000000001,
+        "sampled_binary_brier": 0.14570000000000002,
+        "mean_reward_std_within_group": 0.11745827808044851,
+        "mean_action_entropy": 0.203678979575634,
+        "mean_digit_entropy": 0.7045171761885285,
+        "mean_grad_norm_when_updated": 22.975736482441427,
+        "updates": 15,
+        "skipped": 10,
+        "group_types": {
+          "all_correct": 18,
+          "same_y_confidence_only_updates": 11,
+          "all_wrong": 3,
+          "mixed": 4
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.628937728767059,
+        "confidence_advantage_energy_share_of_total": 0.15069651013475077,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 1,
+          "3": 0,
+          "4": 1,
+          "5": 2,
+          "6": 5,
+          "7": 8,
+          "8": 19,
+          "9": 64
+        }
+      },
+      {
+        "steps": [
+          201,
+          225
+        ],
+        "mean_reward": 1.19708,
+        "sampled_correct_rate": 0.88,
+        "mean_q": 0.926,
+        "mean_q_when_correct": 0.9397727272727273,
+        "mean_q_when_wrong": 0.8250000000000001,
+        "sampled_binary_brier": 0.0873,
+        "mean_reward_std_within_group": 0.00436760707758367,
+        "mean_action_entropy": 0.10057853296399116,
+        "mean_digit_entropy": 0.3503343117330223,
+        "mean_grad_norm_when_updated": 0.5389273911714554,
+        "updates": 8,
+        "skipped": 17,
+        "group_types": {
+          "all_correct": 22,
+          "same_y_confidence_only_updates": 8,
+          "all_wrong": 3
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": null,
+        "confidence_advantage_energy_share_of_total": 1.0,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 2,
+          "7": 4,
+          "8": 10,
+          "9": 84
+        }
+      },
+      {
+        "steps": [
+          226,
+          250
+        ],
+        "mean_reward": 0.77068,
+        "sampled_correct_rate": 0.63,
+        "mean_q": 0.8950000000000001,
+        "mean_q_when_correct": 0.9246031746031748,
+        "mean_q_when_wrong": 0.8445945945945947,
+        "sampled_binary_brier": 0.2783,
+        "mean_reward_std_within_group": 0.04103648311458528,
+        "mean_action_entropy": 0.1367162252217531,
+        "mean_digit_entropy": 0.5261515740398317,
+        "mean_grad_norm_when_updated": 6.321923193335533,
+        "updates": 10,
+        "skipped": 15,
+        "group_types": {
+          "all_correct": 15,
+          "same_y_confidence_only_updates": 9,
+          "all_wrong": 9,
+          "mixed": 1
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.7999333305553242,
+        "confidence_advantage_energy_share_of_total": 0.20250472589792057,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 1,
+          "5": 0,
+          "6": 5,
+          "7": 9,
+          "8": 11,
+          "9": 73
+        }
+      },
+      {
+        "steps": [
+          251,
+          275
+        ],
+        "mean_reward": 1.13556,
+        "sampled_correct_rate": 0.85,
+        "mean_q": 0.897,
+        "mean_q_when_correct": 0.9029411764705882,
+        "mean_q_when_wrong": 0.8633333333333334,
+        "sampled_binary_brier": 0.1361,
+        "mean_reward_std_within_group": 0.07063047617673873,
+        "mean_action_entropy": 0.0887753465399146,
+        "mean_digit_entropy": 0.39162950581482925,
+        "mean_grad_norm_when_updated": 15.745044703994479,
+        "updates": 7,
+        "skipped": 18,
+        "group_types": {
+          "all_wrong": 3,
+          "same_y_confidence_only_updates": 5,
+          "all_correct": 20,
+          "mixed": 2
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.7156567413422245,
+        "confidence_advantage_energy_share_of_total": 0.17566393743355924,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 2,
+          "4": 2,
+          "5": 2,
+          "6": 0,
+          "7": 8,
+          "8": 7,
+          "9": 79
+        }
+      },
+      {
+        "steps": [
+          276,
+          300
+        ],
+        "mean_reward": 0.8717199999999999,
+        "sampled_correct_rate": 0.69,
+        "mean_q": 0.8230000000000001,
+        "mean_q_when_correct": 0.8572463768115943,
+        "mean_q_when_wrong": 0.7467741935483871,
+        "sampled_binary_brier": 0.23570000000000005,
+        "mean_reward_std_within_group": 0.038169757043942806,
+        "mean_action_entropy": 0.10396059343591332,
+        "mean_digit_entropy": 0.5079747052917568,
+        "mean_grad_norm_when_updated": 7.78889426920149,
+        "updates": 9,
+        "skipped": 16,
+        "group_types": {
+          "all_wrong": 7,
+          "same_y_confidence_only_updates": 8,
+          "all_correct": 17,
+          "mixed": 1
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.5174707721214794,
+        "confidence_advantage_energy_share_of_total": 0.13435088357755254,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 6,
+          "3": 6,
+          "4": 3,
+          "5": 3,
+          "6": 1,
+          "7": 7,
+          "8": 5,
+          "9": 69
+        }
+      }
+    ],
+    "windows_100": [
+      {
+        "steps": [
+          1,
+          100
+        ],
+        "mean_reward": 0.9587600000000001,
+        "sampled_correct_rate": 0.7425,
+        "mean_q": 0.8522500000000001,
+        "mean_q_when_correct": 0.8664983164983165,
+        "mean_q_when_wrong": 0.8111650485436894,
+        "sampled_binary_brier": 0.20185000000000003,
+        "mean_reward_std_within_group": 0.19991707821842283,
+        "mean_action_entropy": 0.3653028834797442,
+        "mean_digit_entropy": 1.0647819769382476,
+        "mean_grad_norm_when_updated": 10.500631737409204,
+        "updates": 82,
+        "skipped": 18,
+        "group_types": {
+          "mixed": 25,
+          "all_correct": 61,
+          "same_y_confidence_only_updates": 57,
+          "all_wrong": 14
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.6714018501943858,
+        "confidence_advantage_energy_share_of_total": 0.16508579256192465,
+        "q_bins": {
+          "0": 2,
+          "1": 4,
+          "2": 1,
+          "3": 0,
+          "4": 5,
+          "5": 6,
+          "6": 11,
+          "7": 67,
+          "8": 118,
+          "9": 186
+        }
+      },
+      {
+        "steps": [
+          101,
+          200
+        ],
+        "mean_reward": 1.00892,
+        "sampled_correct_rate": 0.77,
+        "mean_q": 0.8235000000000001,
+        "mean_q_when_correct": 0.8370129870129871,
+        "mean_q_when_wrong": 0.7782608695652175,
+        "sampled_binary_brier": 0.1727,
+        "mean_reward_std_within_group": 0.1585666266363114,
+        "mean_action_entropy": 0.23997315188869833,
+        "mean_digit_entropy": 0.8348108285758644,
+        "mean_grad_norm_when_updated": 18.918372003982466,
+        "updates": 78,
+        "skipped": 22,
+        "group_types": {
+          "all_correct": 66,
+          "same_y_confidence_only_updates": 57,
+          "all_wrong": 13,
+          "mixed": 21
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.6100198646717315,
+        "confidence_advantage_energy_share_of_total": 0.1450606684981685,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 2,
+          "3": 1,
+          "4": 5,
+          "5": 6,
+          "6": 31,
+          "7": 102,
+          "8": 140,
+          "9": 113
+        }
+      },
+      {
+        "steps": [
+          201,
+          300
+        ],
+        "mean_reward": 0.9937600000000001,
+        "sampled_correct_rate": 0.7625,
+        "mean_q": 0.8852500000000001,
+        "mean_q_when_correct": 0.907704918032787,
+        "mean_q_when_wrong": 0.8131578947368423,
+        "sampled_binary_brier": 0.18435,
+        "mean_reward_std_within_group": 0.03855108085321263,
+        "mean_action_entropy": 0.10750767454039306,
+        "mean_digit_entropy": 0.44402252421986,
+        "mean_grad_norm_when_updated": 7.28958860039711,
+        "updates": 34,
+        "skipped": 66,
+        "group_types": {
+          "all_correct": 74,
+          "same_y_confidence_only_updates": 30,
+          "all_wrong": 22,
+          "mixed": 4
+        },
+        "confidence_advantage_rms_to_correctness_advantage_rms": 0.6998021698473625,
+        "confidence_advantage_energy_share_of_total": 0.1772067337668121,
+        "q_bins": {
+          "0": 0,
+          "1": 0,
+          "2": 6,
+          "3": 9,
+          "4": 6,
+          "5": 5,
+          "6": 8,
+          "7": 28,
+          "8": 33,
+          "9": 305
+        }
+      }
+    ]
+  }
+}

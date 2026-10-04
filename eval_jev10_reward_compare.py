@@ -37,6 +37,8 @@ def main():
     parser.add_argument('--step', type=int, choices=(100,200,300))
     parser.add_argument('--device', required=True)
     parser.add_argument('--dataset', choices=('validation','blind'), default='validation')
+    parser.add_argument('--adapter')
+    parser.add_argument('--name')
     args = parser.parse_args()
     if args.dataset == 'validation':
         data_file = ROOT/'data/jev10_v2/validation.jsonl'
@@ -49,6 +51,8 @@ def main():
     if args.mode == 'baseline':
         if args.step is not None:
             raise ValueError('Baseline has no step')
+        if args.adapter or args.name:
+            raise ValueError('Baseline does not accept adapter/name overrides')
         adapter = START
         name = 'baseline'
     else:
@@ -56,6 +60,14 @@ def main():
             raise ValueError('Step required')
         adapter = ROOT / f'runs/jev10_reward_{args.mode}_v2_300/checkpoints/step_{args.step:04d}'
         name = f'{args.mode}_step_{args.step:04d}'
+        if args.adapter:
+            adapter = (ROOT/args.adapter).resolve()
+            if not adapter.is_relative_to(ROOT/'runs'):
+                raise ValueError('Adapter must be inside project runs')
+        if args.name:
+            if Path(args.name).name != args.name:
+                raise ValueError('Name must be a single directory name')
+            name = args.name
         run = adapter.parent.parent
         if (run/'STATUS.txt').read_text().strip() != 'COMPLETED 300':
             raise ValueError(f'Training incomplete: {run}')

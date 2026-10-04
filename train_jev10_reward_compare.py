@@ -22,11 +22,11 @@ BETA = 0.2
 ACTION_TEMPERATURE = 2.0
 
 
-def reward(y, q, mode):
+def reward(y, q, mode, beta=BETA):
     if mode == 'old_brier':
-        return y - BETA * (q-y)**2
+        return y - beta * (q-y)**2
     if mode == 'proposed':
-        return y + BETA * (2*y*q-q*q)
+        return y + beta * (2*y*q-q*q)
     raise ValueError(mode)
 
 
@@ -43,10 +43,17 @@ def main():
     parser.add_argument('--mode', choices=('old_brier', 'proposed'), required=True)
     parser.add_argument('--device', required=True)
     parser.add_argument('--limit', type=int, default=300)
+    parser.add_argument('--beta', type=float, default=BETA)
+    parser.add_argument('--run-name')
     args = parser.parse_args()
     if not 1 <= args.limit <= 4813:
         raise ValueError('Invalid limit')
-    out = ROOT / 'runs' / f'jev10_reward_{args.mode}_v2_{args.limit}'
+    if not 0 < args.beta <= 1:
+        raise ValueError('beta must be in (0,1]')
+    run_name = args.run_name or f'jev10_reward_{args.mode}_v2_{args.limit}'
+    if Path(run_name).name != run_name:
+        raise ValueError('run-name must be a single directory name')
+    out = ROOT / 'runs' / run_name
     if out.exists():
         raise FileExistsError(out)
     cfg = yaml.safe_load((ROOT/'config.yaml').read_text(encoding='utf-8'))
@@ -54,7 +61,7 @@ def main():
     random.Random(SEED).shuffle(rows)
     rows = rows[:args.limit]
     out.mkdir(parents=True)
-    run_cfg = {'mode': args.mode, 'beta': BETA, 'seed': SEED,
+    run_cfg = {'mode': args.mode, 'beta': args.beta, 'seed': SEED,
                'source_adapter': str(START),
                'source_adapter_weights_sha256': sha256(START/'adapter_model.safetensors'),
                'data': str(DATA), 'data_sha256': sha256(DATA),
@@ -100,7 +107,7 @@ def main():
                         digits[i] = digit
                     digit_entropy[action] = float(-(dp*dp.clamp_min(1e-12).log()).sum())
             correct = [int(a == row['correct_choice']) for a in actions]
-            rewards = [reward(y, CONFIDENCES[d], args.mode) for y,d in zip(correct,digits)]
+            rewards = [reward(y, CONFIDENCES[d], args.mode, args.beta) for y,d in zip(correct,digits)]
             rt = torch.tensor(rewards, dtype=torch.float32, device=args.device)
             adv = rt-rt.mean()
             entry = {'step': step, 'id': row['id'], 'sampled_actions': actions,

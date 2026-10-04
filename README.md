@@ -12,6 +12,10 @@ The historical RLCD prototype and its original reproduction notes follow below. 
 
 The [new RLCD reward experiment](JEV10_REWARD_20261003_REPORT.md) compares `y + β(2yq-q²)` with the earlier Brier reward using corrected action tokens. On a separate 1,000-question JeV holdout, it improved directly generated confidence Brier from 0.2616 to 0.2217 with no clear accuracy difference. The existing Platt-calibrated production baseline still had a lower Brier of 0.1744 on those same questions, so the production inference model was not changed.
 
+The [beta and training-dynamics diagnostic](JEV10_REWARD_BETA_DIAGNOSTIC.md) decomposes the 300-step reward logs and validation trajectories. It proposes a controlled confidence-weight schedule for a future ablation; that schedule has not been trained yet.
+
+The [β=0.4 trial](JEV10_REWARD_BETA040_REPORT.md) raised the proposed reward weight from 0.2 under matched training conditions. At the prespecified step 300 on the reused 481-question JeV validation set, direct Brier worsened from 0.2430 to 0.2654 while accuracy was 309/481 versus 312/481. The β=0.4 model was not promoted.
+
 A video-conditioned Qwen3.5-2B model generates exactly:
 
 ```text
