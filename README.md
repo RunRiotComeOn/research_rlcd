@@ -16,6 +16,8 @@ The [beta and training-dynamics diagnostic](JEV10_REWARD_BETA_DIAGNOSTIC.md) dec
 
 The [β=0.4 trial](JEV10_REWARD_BETA040_REPORT.md) raised the proposed reward weight from 0.2 under matched training conditions. At the prespecified step 300 on the reused 481-question JeV validation set, direct Brier worsened from 0.2430 to 0.2654 while accuracy was 309/481 versus 312/481. The β=0.4 model was not promoted.
 
+The [dynamic confidence-weight experiment](JEV10_REWARD_SCHEDULE_REPORT.md) held the correctness coefficient at 1.2 and tapered the confidence-error weight from 0.2 to 0.05 after step 100. On a newly frozen, video-disjoint 1,000-question JeV holdout, direct Brier improved from 0.23228 to 0.22188; accuracy was 657/1000 versus 654/1000, an uncertain difference. The production model remains unchanged.
+
 A video-conditioned Qwen3.5-2B model generates exactly:
 
 ```text

@@ -36,7 +36,7 @@ def main():
     parser.add_argument('--mode', choices=('baseline','old_brier','proposed'), required=True)
     parser.add_argument('--step', type=int, choices=(100,200,300))
     parser.add_argument('--device', required=True)
-    parser.add_argument('--dataset', choices=('validation','blind'), default='validation')
+    parser.add_argument('--dataset', choices=('validation','blind','schedule_blind'), default='validation')
     parser.add_argument('--adapter')
     parser.add_argument('--name')
     args = parser.parse_args()
@@ -44,9 +44,13 @@ def main():
         data_file = ROOT/'data/jev10_v2/validation.jsonl'
         out_root = ROOT/'evaluations/jev10_reward_compare_v2'
         expected_rows = 481
-    else:
+    elif args.dataset == 'blind':
         data_file = ROOT/'data/jev10_reward_blind_v1/blind.jsonl'
         out_root = ROOT/'evaluations/jev10_reward_blind_v1'
+        expected_rows = 1000
+    else:
+        data_file = ROOT/'data/jev10_schedule_blind_v1/blind.jsonl'
+        out_root = ROOT/'evaluations/jev10_schedule_blind_v1'
         expected_rows = 1000
     if args.mode == 'baseline':
         if args.step is not None:
@@ -78,7 +82,7 @@ def main():
     rows = [json.loads(s) for s in data_file.read_text(encoding='utf-8').splitlines()]
     if len(rows) != expected_rows:
         raise ValueError(f'{args.dataset} row count changed')
-    if args.dataset == 'blind':
+    if args.dataset in ('blind','schedule_blind'):
         manifest = json.loads((data_file.parent/'manifest.json').read_text(encoding='utf-8'))
         if manifest['output_sha256'] != sha256(data_file):
             raise ValueError('Blind dataset checksum changed')

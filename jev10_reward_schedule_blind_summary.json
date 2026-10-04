@@ -1,0 +1,38 @@
+{
+  "protocol": "/pfs/hyx/videojev-rlcd/JEV10_REWARD_SCHEDULE_BLIND_PROTOCOL.md",
+  "dataset_sha256": "ab021800e196cd9417d28b0dad743560918e488546761fbfd2c107b7b21a77fd",
+  "video_paths": 895,
+  "rows": 1000,
+  "fixed": {
+    "correct": 657,
+    "accuracy": 0.657,
+    "direct_brier": 0.23228000000000004,
+    "mean_q": 0.8295000000000001,
+    "q9_count": 444
+  },
+  "scheduled": {
+    "correct": 654,
+    "accuracy": 0.654,
+    "direct_brier": 0.22188000000000002,
+    "mean_q": 0.7884000000000001,
+    "q9_count": 214
+  },
+  "scheduled_minus_fixed_accuracy": {
+    "difference": -0.003,
+    "cluster_bootstrap_95pct": [
+      -0.014940239043824702,
+      0.009018036072144289
+    ]
+  },
+  "scheduled_minus_fixed_brier": {
+    "difference": -0.010400000000000006,
+    "cluster_bootstrap_95pct": [
+      -0.017793522267206485,
+      -0.0029577464788732464
+    ]
+  },
+  "gained_questions": 17,
+  "lost_questions": 20,
+  "fixed_predictions_sha256": "4dc905bad8669b046f28652ce1c5b8472cf052880e84f0133839df1ca37d1a33",
+  "scheduled_predictions_sha256": "3b9cbc892429031438425e42f970f010027a3aab81d334f1cc8e22080a242c92"
+}

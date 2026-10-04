@@ -30,6 +30,13 @@ def reward(y, q, mode, beta=BETA):
     raise ValueError(mode)
 
 
+def scheduled_lambda(step):
+    """Keep the first 100 updates matched, then taper confidence weight."""
+    if not 1 <= step <= 300:
+        raise ValueError('Scheduled run requires steps 1..300')
+    return 0.2 if step <= 100 else 0.2 - 0.15 * (step - 100) / 200
+
+
 def sha256(path):
     digest = hashlib.sha256()
     with path.open('rb') as stream:
@@ -40,7 +47,7 @@ def sha256(path):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', choices=('old_brier', 'proposed'), required=True)
+    parser.add_argument('--mode', choices=('old_brier', 'proposed', 'proposed_schedule'), required=True)
     parser.add_argument('--device', required=True)
     parser.add_argument('--limit', type=int, default=300)
     parser.add_argument('--beta', type=float, default=BETA)
@@ -50,6 +57,8 @@ def main():
         raise ValueError('Invalid limit')
     if not 0 < args.beta <= 1:
         raise ValueError('beta must be in (0,1]')
+    if args.mode == 'proposed_schedule' and (args.limit != 300 or args.beta != BETA):
+        raise ValueError('The prespecified schedule requires limit=300 and beta=0.2')
     run_name = args.run_name or f'jev10_reward_{args.mode}_v2_{args.limit}'
     if Path(run_name).name != run_name:
         raise ValueError('run-name must be a single directory name')
@@ -71,6 +80,8 @@ def main():
                'learning_rate': 2e-5,
                'objective': 'group-centered REINFORCE without reward std division; correct context tokens',
                'device': args.device}
+    if args.mode == 'proposed_schedule':
+        run_cfg['reward_schedule'] = '1.2*y - lambda_t*(q-y)^2; lambda=.2 steps 1..100, then linear to .05 at step 300'
     (out/'run_config.json').write_text(json.dumps(run_cfg, indent=2)+'\n')
     torch.manual_seed(SEED)
     processor, model = load_model(cfg['model']['path'], args.device)
@@ -107,7 +118,10 @@ def main():
                         digits[i] = digit
                     digit_entropy[action] = float(-(dp*dp.clamp_min(1e-12).log()).sum())
             correct = [int(a == row['correct_choice']) for a in actions]
-            rewards = [reward(y, CONFIDENCES[d], args.mode, args.beta) for y,d in zip(correct,digits)]
+            lam = scheduled_lambda(step) if args.mode == 'proposed_schedule' else None
+            rewards = [(1.2*y - lam*(CONFIDENCES[d]-y)**2)
+                       if lam is not None else reward(y, CONFIDENCES[d], args.mode, args.beta)
+                       for y,d in zip(correct,digits)]
             rt = torch.tensor(rewards, dtype=torch.float32, device=args.device)
             adv = rt-rt.mean()
             entry = {'step': step, 'id': row['id'], 'sampled_actions': actions,
@@ -117,6 +131,8 @@ def main():
                      'action_entropy': float(-(ap*ap.clamp_min(1e-12).log()).sum()),
                      'digit_entropy': sum(digit_entropy.values())/len(digit_entropy),
                      'skipped': bool(float(adv.abs().max()) < 1e-8)}
+            if lam is not None:
+                entry['lambda_confidence'] = lam
             if not entry['skipped']:
                 model.train()
                 optimizer.zero_grad(set_to_none=True)
