@@ -18,6 +18,8 @@ The [β=0.4 trial](JEV10_REWARD_BETA040_REPORT.md) raised the proposed reward we
 
 The [dynamic confidence-weight experiment](JEV10_REWARD_SCHEDULE_REPORT.md) held the correctness coefficient at 1.2 and tapered the confidence-error weight from 0.2 to 0.05 after step 100. On a newly frozen, video-disjoint 1,000-question JeV holdout, direct Brier improved from 0.23228 to 0.22188; accuracy was 657/1000 versus 654/1000, an uncertain difference. The production model remains unchanged.
 
+The [exact expected-Brier pilot](JEV10_EXPECTED_BRIER_REPORT.md) removed confidence sampling, separated correctness-only action REINFORCE from confidence loss, and trained confidence on the greedy action. It gave calibration gradients even when all four action rollouts agreed. At the prespecified step 300 on the reused JeV validation set, however, actual output-bin Brier was 0.24275 versus 0.22080 for the dynamic-weight model; this pilot was not promoted to a new blind test.
+
 A video-conditioned Qwen3.5-2B model generates exactly:
 
 ```text

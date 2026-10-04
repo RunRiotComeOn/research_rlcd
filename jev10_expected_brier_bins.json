@@ -1,0 +1,92 @@
+{
+  "0": {
+    "rows": 2,
+    "correct": 2,
+    "accuracy": 1.0,
+    "argmax_q": 0.05,
+    "mean_softmax_q": 0.1769547462463379,
+    "mean_confidence_variance": 0.018224493472599333,
+    "direct_brier": 0.9025
+  },
+  "1": {
+    "rows": 16,
+    "correct": 8,
+    "accuracy": 0.5,
+    "argmax_q": 0.15000000000000002,
+    "mean_softmax_q": 0.36273485980927944,
+    "mean_confidence_variance": 0.07074971297665371,
+    "direct_brier": 0.37249999999999994
+  },
+  "2": {
+    "rows": 50,
+    "correct": 28,
+    "accuracy": 0.56,
+    "argmax_q": 0.25,
+    "mean_softmax_q": 0.3820085507631302,
+    "mean_confidence_variance": 0.0477998390311718,
+    "direct_brier": 0.3425
+  },
+  "3": {
+    "rows": 129,
+    "correct": 72,
+    "accuracy": 0.5581395348837209,
+    "argmax_q": 0.35000000000000003,
+    "mean_softmax_q": 0.3827585596446843,
+    "mean_confidence_variance": 0.017673936178923044,
+    "direct_brier": 0.2899418604651162
+  },
+  "4": {
+    "rows": 49,
+    "correct": 17,
+    "accuracy": 0.3469387755102041,
+    "argmax_q": 0.45,
+    "mean_softmax_q": 0.4870149931129144,
+    "mean_confidence_variance": 0.026607060339366894,
+    "direct_brier": 0.23719387755102042
+  },
+  "5": {
+    "rows": 6,
+    "correct": 3,
+    "accuracy": 0.5,
+    "argmax_q": 0.55,
+    "mean_softmax_q": 0.574152852098147,
+    "mean_confidence_variance": 0.04354907882787994,
+    "direct_brier": 0.2525
+  },
+  "6": {
+    "rows": 2,
+    "correct": 1,
+    "accuracy": 0.5,
+    "argmax_q": 0.6500000000000001,
+    "mean_softmax_q": 0.6485263407230377,
+    "mean_confidence_variance": 0.03199845333485022,
+    "direct_brier": 0.2725
+  },
+  "7": {
+    "rows": 13,
+    "correct": 6,
+    "accuracy": 0.46153846153846156,
+    "argmax_q": 0.7500000000000001,
+    "mean_softmax_q": 0.7586799951700064,
+    "mean_confidence_variance": 0.01336175556141315,
+    "direct_brier": 0.3317307692307693
+  },
+  "8": {
+    "rows": 32,
+    "correct": 24,
+    "accuracy": 0.75,
+    "argmax_q": 0.8500000000000001,
+    "mean_softmax_q": 0.6682247072458267,
+    "mean_confidence_variance": 0.06767919622482685,
+    "direct_brier": 0.1975
+  },
+  "9": {
+    "rows": 182,
+    "correct": 149,
+    "accuracy": 0.8186813186813187,
+    "argmax_q": 0.9500000000000001,
+    "mean_softmax_q": 0.8671764636432732,
+    "mean_confidence_variance": 0.02993528485257835,
+    "direct_brier": 0.1656868131868132
+  }
+}

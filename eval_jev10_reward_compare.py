@@ -10,7 +10,7 @@ import torch
 import yaml
 from peft import PeftModel
 
-from core import calibration_metrics, parse_output
+from core import CONFIDENCES, calibration_metrics, parse_output
 from decision_policy_v2 import greedy_decision
 from model import load_model, prepare_video, to_device
 
@@ -115,6 +115,12 @@ def main():
                     'gold_action': chr(65+row['correct_choice']),
                     'predicted_action': chr(65+decision['action_index']),
                     **decision}
+            item['distribution_expected_brier'] = sum(
+                p * (q-item['correct'])**2
+                for p,q in zip(decision['digit_probabilities'], CONFIDENCES))
+            item['confidence_variance'] = sum(
+                p * (q-decision['expected_q'])**2
+                for p,q in zip(decision['digit_probabilities'], CONFIDENCES))
             results.append(item)
             stream.write(json.dumps(item, ensure_ascii=False)+'\n')
             stream.flush()
@@ -130,6 +136,8 @@ def main():
                'accuracy': sum(r['correct'] for r in results)/len(results),
                'direct': metrics(results,'confidence'),
                'expected': metrics(results,'expected_q'),
+               'distribution_expected_brier': sum(r['distribution_expected_brier'] for r in results)/len(results),
+               'mean_confidence_variance': sum(r['confidence_variance'] for r in results)/len(results),
                'mean_reported_confidence': sum(r['confidence'] for r in results)/len(results),
                'confidence_bins': dict(sorted(Counter(r['confidence_bin'] for r in results).items())),
                'by_source': {k:{'rows':len(v),'accuracy':sum(r['correct'] for r in v)/len(v)}
