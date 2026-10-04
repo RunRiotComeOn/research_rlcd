@@ -1,0 +1,28 @@
+{
+  "examples": 3000,
+  "selection_rule": "minimum development Brier, earliest tie",
+  "checkpoints": [
+    {
+      "examples": 1000,
+      "development_brier": 0.18216155520124383,
+      "development_mean_q": 0.745909291446209
+    },
+    {
+      "examples": 2000,
+      "development_brier": 0.1769014713217019,
+      "development_mean_q": 0.7295759611129761
+    },
+    {
+      "examples": 3000,
+      "development_brier": 0.16525546445305792,
+      "development_mean_q": 0.6701404193043708
+    },
+    {
+      "examples": 4000,
+      "development_brier": 0.17199547056613748,
+      "development_mean_q": 0.7307079493403434
+    }
+  ],
+  "development_platt_brier": 0.1718018501996994,
+  "development_constant_oracle_brier": 0.21313601080322186
+}

@@ -1,0 +1,101 @@
+{
+  "seed": 20261005,
+  "source": "/pfs/qcy/JeV-Data/video_multiple_choice_clean_48126.json",
+  "source_sha256": "c5e7d355985abaae5a7f85ed74091245751bc5dbe07079a5b3be098d8eafbf4f",
+  "prior_sha256": {
+    "/pfs/hyx/videojev-rlcd/data/jev10_v2/train.jsonl": "5d8b085ce1cf2542d7b79242697c59f3d2b3f346457e081cde5e18c57f19776b",
+    "/pfs/hyx/videojev-rlcd/data/jev10_v2/validation.jsonl": "bdda2aedfae8d277c331f055111f49be2228499ecde20545fde8a288e7a00405",
+    "/pfs/hyx/videojev-rlcd/data/jev10_v2/test.jsonl": "04741c205abb028632d5e0b3b5da445a82ac247eeaa7aa40008986cc5350e869",
+    "/pfs/hyx/videojev-rlcd/data/jev10_blind_v1/blind.jsonl": "7d222e87f5553bd05369c1469e73eebf13fbc5436e2184a34d7443e5bcf491c2",
+    "/pfs/hyx/videojev-rlcd/data/jev10_reward_blind_v1/blind.jsonl": "d4f03196578bad400dba9dc396bd04b7ddb21e8f2e3269419235e9389f195464",
+    "/pfs/hyx/videojev-rlcd/data/jev10_schedule_blind_v1/blind.jsonl": "ab021800e196cd9417d28b0dad743560918e488546761fbfd2c107b7b21a77fd"
+  },
+  "excluded_prior_rows": 9775,
+  "eligible_rows": 36755,
+  "splits": {
+    "final": {
+      "rows": 1000,
+      "video_filenames": 825,
+      "source_counts": {
+        "OneThinker-LLaVA-Video-178K/2_3_m_academic_v0_1": 33,
+        "InternVideo3": 332,
+        "longvideo-reason": 317,
+        "OneThinker-longvideo-reason": 35,
+        "VideoChat-R1-NextGQA-test": 32,
+        "OneThinker-NeXT-QA/30_60_s_nextqa": 11,
+        "Video-R1-LLaVA-Video-178K/2_3_m_academic_v0_1": 27,
+        "OneThinker-Holmes-train": 4,
+        "VSI-Train-10k": 13,
+        "OneThinker-CLEVRER": 17,
+        "Video-Holmes": 31,
+        "Video-R1-STAR": 44,
+        "VideoChat-R1-NextGQA-val": 27,
+        "Video-R1-NeXT-QA/0_30_s_nextqa": 10,
+        "OneThinker-NeXT-QA/0_30_s_nextqa": 9,
+        "OneThinker-STAR": 40,
+        "OneThinker-NeXT-QA/1_2_m_nextqa": 12,
+        "Video-R1-NeXT-QA/30_60_s_nextqa": 1,
+        "Video-R1-CLEVRER": 3,
+        "Video-R1-NeXT-QA/1_2_m_nextqa": 2
+      },
+      "path": "/pfs/hyx/videojev-rlcd/data/jev10_unseen_calibration_v1/final.jsonl",
+      "sha256": "7026336e42824050941de51989288ff2319e47169311823d2eb6c530b052db4d"
+    },
+    "development": {
+      "rows": 500,
+      "video_filenames": 400,
+      "source_counts": {
+        "InternVideo3": 157,
+        "OneThinker-STAR": 29,
+        "longvideo-reason": 141,
+        "Video-R1-NeXT-QA/0_30_s_nextqa": 6,
+        "OneThinker-NeXT-QA/30_60_s_nextqa": 11,
+        "OneThinker-LLaVA-Video-178K/2_3_m_academic_v0_1": 16,
+        "Video-R1-LLaVA-Video-178K/2_3_m_academic_v0_1": 19,
+        "OneThinker-NeXT-QA/0_30_s_nextqa": 5,
+        "VideoChat-R1-NextGQA-val": 26,
+        "VideoChat-R1-NextGQA-test": 25,
+        "VSI-Train-10k": 12,
+        "Video-R1-STAR": 14,
+        "Video-Holmes": 6,
+        "OneThinker-longvideo-reason": 16,
+        "Video-R1-CLEVRER": 7,
+        "OneThinker-CLEVRER": 4,
+        "OneThinker-Holmes-train": 2,
+        "OneThinker-NeXT-QA/1_2_m_nextqa": 3,
+        "Video-R1-NeXT-QA/1_2_m_nextqa": 1
+      },
+      "path": "/pfs/hyx/videojev-rlcd/data/jev10_unseen_calibration_v1/development.jsonl",
+      "sha256": "87c0d48ad8a37780d658d160d4623a18f71153d3b82b158fcb80afb821d90aa3"
+    },
+    "fit": {
+      "rows": 4000,
+      "video_filenames": 3302,
+      "source_counts": {
+        "InternVideo3": 1300,
+        "longvideo-reason": 1258,
+        "OneThinker-STAR": 244,
+        "Video-R1-STAR": 173,
+        "OneThinker-LLaVA-Video-178K/2_3_m_academic_v0_1": 114,
+        "OneThinker-NeXT-QA/30_60_s_nextqa": 68,
+        "VideoChat-R1-NextGQA-val": 121,
+        "OneThinker-Holmes-train": 14,
+        "VideoChat-R1-NextGQA-test": 146,
+        "OneThinker-longvideo-reason": 116,
+        "VSI-Train-10k": 44,
+        "Video-R1-CLEVRER": 39,
+        "OneThinker-NeXT-QA/1_2_m_nextqa": 39,
+        "Video-Holmes": 99,
+        "OneThinker-CLEVRER": 44,
+        "Video-R1-NeXT-QA/1_2_m_nextqa": 11,
+        "OneThinker-NeXT-QA/0_30_s_nextqa": 57,
+        "Video-R1-LLaVA-Video-178K/2_3_m_academic_v0_1": 77,
+        "Video-R1-NeXT-QA/0_30_s_nextqa": 25,
+        "Video-R1-NeXT-QA/30_60_s_nextqa": 10,
+        "OneThinker-NeXT-QA/2_3_m_nextqa": 1
+      },
+      "path": "/pfs/hyx/videojev-rlcd/data/jev10_unseen_calibration_v1/fit.jsonl",
+      "sha256": "5edec44515ef6493828f5abbf01b87c38b06e26a1780d5fe8b1afe8807d7735b"
+    }
+  }
+}

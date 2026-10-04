@@ -1,0 +1,54 @@
+{
+  "rows": 1000,
+  "accuracy": 0.6600000262260437,
+  "constant_oracle_brier": 0.22439999160766533,
+  "selected_lora_training_examples": 3000,
+  "methods": {
+    "constant_fit_rate": {
+      "brier": 0.22495224961900717,
+      "mean_q": 0.6834999918937683,
+      "accuracy": 0.6600000262260437
+    },
+    "chosen_action_p": {
+      "brier": 0.2549618644814844,
+      "mean_q": 0.9057553334534169,
+      "accuracy": 0.6600000262260437
+    },
+    "original_mean_q": {
+      "brier": 0.23094695698809123,
+      "mean_q": 0.7545946616530418,
+      "accuracy": 0.6600000262260437
+    },
+    "platt": {
+      "brier": 0.17577575147151947,
+      "mean_q": 0.679553747177124,
+      "accuracy": 0.6600000262260437
+    },
+    "head": {
+      "brier": 0.17488141357898712,
+      "mean_q": 0.6749242544174194,
+      "accuracy": 0.6600000262260437
+    },
+    "confidence_lora": {
+      "brier": 0.16495120045337267,
+      "mean_q": 0.663925176948309,
+      "accuracy": 0.6600000262260437
+    }
+  },
+  "paired_delta_vs_platt": {
+    "head": {
+      "brier_delta": -0.0008943264256231487,
+      "video_bootstrap_95pct_interval": [
+        -0.00830127177760005,
+        0.00638092870358376
+      ]
+    },
+    "confidence_lora": {
+      "brier_delta": -0.010824544319376336,
+      "video_bootstrap_95pct_interval": [
+        -0.018534722999424148,
+        -0.0033036909423333418
+      ]
+    }
+  }
+}
