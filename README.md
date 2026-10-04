@@ -20,6 +20,8 @@ The [dynamic confidence-weight experiment](JEV10_REWARD_SCHEDULE_REPORT.md) held
 
 The [exact expected-Brier pilot](JEV10_EXPECTED_BRIER_REPORT.md) removed confidence sampling, separated correctness-only action REINFORCE from confidence loss, and trained confidence on the greedy action. It gave calibration gradients even when all four action rollouts agreed. At the prespecified step 300 on the reused JeV validation set, however, actual output-bin Brier was 0.24275 versus 0.22080 for the dynamic-weight model; this pilot was not promoted to a new blind test.
 
+The [frozen-action, separate-confidence pilot](JEV10_FROZEN_ACTION_MEANQ_REPORT.md) trained a separate LoRA directly against Brier of the ten-bin softmax mean, and exposed that mean as a percentage. All 481 validation actions stayed identical to the production answer LoRA. The prespecified step-300 confidence Brier worsened from 0.23500 before training to 0.29221; no new blind test was run.
+
 A video-conditioned Qwen3.5-2B model generates exactly:
 
 ```text
