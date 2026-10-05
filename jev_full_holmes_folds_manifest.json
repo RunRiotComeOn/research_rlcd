@@ -1,0 +1,21 @@
+{
+  "seed": 20261005,
+  "source": "/pfs/hyx/videojev-rlcd/data/jev_full_holmes_v1/jev_all.jsonl",
+  "source_sha256": "40e81671ffca071fa8c83b3153fd2a19d1955fa3747f5cb84a4c17c119ef2acc",
+  "cross_fold_question_id_overlap": 0,
+  "cross_fold_video_filename_overlap": 0,
+  "folds": {
+    "fold0": {
+      "rows": 24063,
+      "video_filenames": 19473,
+      "output": "/pfs/hyx/videojev-rlcd/data/jev_full_holmes_v1/folds/fold0.jsonl",
+      "output_sha256": "9c600787546696bfc29b514419f717a765dcc707f883b824a5cd8bffe333a07c"
+    },
+    "fold1": {
+      "rows": 24063,
+      "video_filenames": 19350,
+      "output": "/pfs/hyx/videojev-rlcd/data/jev_full_holmes_v1/folds/fold1.jsonl",
+      "output_sha256": "11758577725d01366013f24a9928f7ce139e99ba8d83133b239f69b0aceeb1fc"
+    }
+  }
+}

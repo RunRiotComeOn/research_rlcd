@@ -1,0 +1,32 @@
+{
+  "local_repair": {
+    "problem_id": "9020007652",
+    "field": "options[1]",
+    "old": "B. ).",
+    "new": "B. [missing option text]",
+    "reason": "The original distractor contains no usable text"
+  },
+  "cross_source_problem_id_overlap": 0,
+  "cross_source_video_path_overlap": 0,
+  "cross_source_video_filename_overlap": 0,
+  "sets": {
+    "jev_all": {
+      "source": "/pfs/qcy/JeV-Data/video_multiple_choice_clean_48126.json",
+      "source_sha256": "c5e7d355985abaae5a7f85ed74091245751bc5dbe07079a5b3be098d8eafbf4f",
+      "rows": 48126,
+      "video_paths": 42197,
+      "video_filenames": 38823,
+      "output": "/pfs/hyx/videojev-rlcd/data/jev_full_holmes_v1/jev_all.jsonl",
+      "output_sha256": "40e81671ffca071fa8c83b3153fd2a19d1955fa3747f5cb84a4c17c119ef2acc"
+    },
+    "holmes_all": {
+      "source": "/pfs/qcy/JeV-Data/holmes.json",
+      "source_sha256": "b42c96ac155d731ed8f153a7e1638f264677d61bc7337d51675893694af1d75d",
+      "rows": 1837,
+      "video_paths": 270,
+      "video_filenames": 270,
+      "output": "/pfs/hyx/videojev-rlcd/data/jev_full_holmes_v1/holmes_all.jsonl",
+      "output_sha256": "78e7461b8d4f8756ffcf74b75bb934bc90d6a2577167411bbed5d14a3c60167b"
+    }
+  }
+}
