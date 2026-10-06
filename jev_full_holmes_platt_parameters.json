@@ -1,0 +1,14 @@
+{
+  "rows": 48126,
+  "oof_sha256": {
+    "fold0": "6b6a0acb159c81fa23150c9498ca051244d1ddd6ea64579c5699e933e777a347",
+    "fold1": "0ff95c13a6be6eea5a6dba94b4ba18afff0b0f22601764cf3f0433a802f57cdc"
+  },
+  "accuracy": 0.6890869800108049,
+  "constant_oracle_brier": 0.21424611399039345,
+  "selected_p_brier": 0.16380021182844298,
+  "slope": 0.8741343846758517,
+  "intercept": -0.05149041030188456,
+  "platt_mean_q": 0.6890773311925303,
+  "platt_fit_brier": 0.16333270689329316
+}
