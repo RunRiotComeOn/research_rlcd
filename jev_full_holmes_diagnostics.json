@@ -1,0 +1,261 @@
+{
+  "jev_online_last_5000": {
+    "window_training_positions_1based": [
+      43101,
+      48100
+    ],
+    "examples": 5000,
+    "lora_online_brier": 0.17795823846161365,
+    "platt_prefix_fit_brier": 0.16289627501799292,
+    "platt_full_fit_brier_optimistic": 0.16289366876737865,
+    "raw_action_probability_brier": 0.16346083135962497,
+    "window_accuracy": 0.6896,
+    "platt_prefix_slope": 0.8729323982554124,
+    "platt_prefix_intercept": -0.04862583117887304,
+    "window_video_filenames": 4841,
+    "window_videos_seen_in_confidence_prefix": 1297
+  },
+  "holmes_reliability": {
+    "platt": {
+      "ece_10_equal_width": 0.02257049444799426,
+      "bins": [
+        {
+          "range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "mean_q": null,
+          "accuracy": null
+        },
+        {
+          "range": [
+            0.1,
+            0.2
+          ],
+          "count": 0,
+          "mean_q": null,
+          "accuracy": null
+        },
+        {
+          "range": [
+            0.2,
+            0.3
+          ],
+          "count": 122,
+          "mean_q": 0.27716808895692485,
+          "accuracy": 0.23770491803278687
+        },
+        {
+          "range": [
+            0.3,
+            0.4
+          ],
+          "count": 500,
+          "mean_q": 0.35293732703105224,
+          "accuracy": 0.344
+        },
+        {
+          "range": [
+            0.4,
+            0.5
+          ],
+          "count": 428,
+          "mean_q": 0.44693159896142026,
+          "accuracy": 0.4649532710280374
+        },
+        {
+          "range": [
+            0.5,
+            0.6
+          ],
+          "count": 314,
+          "mean_q": 0.5445603489043983,
+          "accuracy": 0.5445859872611465
+        },
+        {
+          "range": [
+            0.6,
+            0.7
+          ],
+          "count": 204,
+          "mean_q": 0.6445681808816041,
+          "accuracy": 0.5931372549019608
+        },
+        {
+          "range": [
+            0.7,
+            0.8
+          ],
+          "count": 142,
+          "mean_q": 0.7462033697013909,
+          "accuracy": 0.6901408450704225
+        },
+        {
+          "range": [
+            0.8,
+            0.9
+          ],
+          "count": 105,
+          "mean_q": 0.8433999933153236,
+          "accuracy": 0.8095238095238095
+        },
+        {
+          "range": [
+            0.9,
+            1.0
+          ],
+          "count": 22,
+          "mean_q": 0.9294415976640779,
+          "accuracy": 0.8181818181818182
+        }
+      ]
+    },
+    "confidence_lora": {
+      "ece_10_equal_width": 0.05846752376418824,
+      "bins": [
+        {
+          "range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "mean_q": null,
+          "accuracy": null
+        },
+        {
+          "range": [
+            0.1,
+            0.2
+          ],
+          "count": 0,
+          "mean_q": null,
+          "accuracy": null
+        },
+        {
+          "range": [
+            0.2,
+            0.3
+          ],
+          "count": 1,
+          "mean_q": 0.2993486225605011,
+          "accuracy": 0.0
+        },
+        {
+          "range": [
+            0.3,
+            0.4
+          ],
+          "count": 122,
+          "mean_q": 0.3742774258382985,
+          "accuracy": 0.2459016393442623
+        },
+        {
+          "range": [
+            0.4,
+            0.5
+          ],
+          "count": 712,
+          "mean_q": 0.4609398772793539,
+          "accuracy": 0.4747191011235955
+        },
+        {
+          "range": [
+            0.5,
+            0.6
+          ],
+          "count": 606,
+          "mean_q": 0.5426285880627019,
+          "accuracy": 0.46864686468646866
+        },
+        {
+          "range": [
+            0.6,
+            0.7
+          ],
+          "count": 232,
+          "mean_q": 0.6443824716683092,
+          "accuracy": 0.603448275862069
+        },
+        {
+          "range": [
+            0.7,
+            0.8
+          ],
+          "count": 108,
+          "mean_q": 0.7442747128230555,
+          "accuracy": 0.6203703703703703
+        },
+        {
+          "range": [
+            0.8,
+            0.9
+          ],
+          "count": 44,
+          "mean_q": 0.8386454419656233,
+          "accuracy": 0.5909090909090909
+        },
+        {
+          "range": [
+            0.9,
+            1.0
+          ],
+          "count": 12,
+          "mean_q": 0.9184260815382004,
+          "accuracy": 0.6666666666666666
+        }
+      ]
+    }
+  },
+  "holmes_by_choice_count": {
+    "6": {
+      "n": 1837,
+      "accuracy": 0.48611867174741424,
+      "mean_platt_q": 0.5002827142753965,
+      "mean_lora_q": 0.5339048592273347,
+      "platt_brier": 0.22852704039090938,
+      "lora_brier": 0.24881663594219933
+    }
+  },
+  "holmes_by_question_first_word": {
+    "what": {
+      "n": 1586,
+      "accuracy": 0.49810844892812106,
+      "mean_platt_q": 0.505837902337454,
+      "mean_lora_q": 0.5431833358723459,
+      "platt_brier": 0.23019270166429298,
+      "lora_brier": 0.24986509290233927
+    },
+    "which": {
+      "n": 95,
+      "accuracy": 0.43157894736842106,
+      "mean_platt_q": 0.4500056883489146,
+      "mean_lora_q": 0.46597213180441605,
+      "platt_brier": 0.2178649317282177,
+      "lora_brier": 0.23697868426376179
+    },
+    "the": {
+      "n": 62,
+      "accuracy": 0.4032258064516129,
+      "mean_platt_q": 0.5232890618650742,
+      "mean_lora_q": 0.529613561687931,
+      "platt_brier": 0.2431258930822583,
+      "lora_brier": 0.2695082115291186
+    },
+    "arrange": {
+      "n": 40,
+      "accuracy": 0.45,
+      "mean_platt_q": 0.4208723717669402,
+      "mean_lora_q": 0.4057252675294876,
+      "platt_brier": 0.21003420849323265,
+      "lora_brier": 0.23085104788713068
+    }
+  },
+  "holmes_videos": {
+    "count": 270,
+    "lora_worse_than_platt_count": 189,
+    "lora_better_than_platt_count": 81,
+    "question_count_min": 4,
+    "question_count_max": 11
+  }
+}

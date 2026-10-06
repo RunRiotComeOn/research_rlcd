@@ -21,3 +21,5 @@ The OOF answer models scored 68.91% on JeV; their fitted Platt Brier on the same
 - All generated data, model weights, optimizer checkpoints, logs and per-question predictions remain under `/pfs/hyx/videojev-rlcd` and are excluded from Git. The source datasets were read only. The one unusable distractor repaired in the derived JeV copy is documented in [the manifest](jev_full_holmes_data_manifest.json).
 
 Compact artifacts: [Holmes summary](jev_full_holmes_summary.json), [OOF Platt fit](jev_full_holmes_platt_parameters.json), [data manifest](jev_full_holmes_data_manifest.json), and [fold manifest](jev_full_holmes_folds_manifest.json). The repeatable row and metric audit is [audit_jev_full_holmes.py](audit_jev_full_holmes.py).
+
+The subsequent [online JeV and Holmes reliability diagnostics](JEV_FULL_HOLMES_DIAGNOSTICS.md) show that the confidence LoRA also trails a prefix-fitted Platt model on the same 5,000 JeV questions before their individual updates (Brier 0.17796 versus 0.16290).
