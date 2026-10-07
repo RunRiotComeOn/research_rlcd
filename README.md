@@ -4,6 +4,8 @@ This repository contains the research code, experiment protocols, and compact re
 
 The completed [full-JeV / full-Holmes experiment](JEV_FULL_HOLMES_REPORT.md) trained the answer adapter on all 48,126 JeV questions, used two-fold out-of-fold labels for confidence training, and tested all 1,837 Holmes questions. Holmes answer accuracy was 48.61%; Platt calibration beat the independent confidence LoRA on Brier (0.22853 versus 0.24882).
 
+The later [frozen-F0 confidence ablation](F0_CONFIDENCE_ABLATION_REPORT.md) compared original-Qwen versus F0 initialization and 2e-6 versus 2e-5 learning rates while keeping the answer policy fixed. Both F0 initialization and higher learning rate helped. Its best development-selected confidence LoRA nearly matched Platt on sealed JeV and Holmes Brier, without establishing a Brier advantage.
+
 ## Current JeV decision-model result
 
 The current inference baseline is the Qwen3.5-2B answer LoRA at `runs/jev10_action_sft_v1/checkpoints/step_4813`, with corrected `Action: <LETTER>` token scoring and Platt calibration fitted on the JeV validation split. The original answer LoRA was trained with a token-position mistake; see [the token audit and correction report](JEV10_DECISION_CONTEXT_REPORT.md).

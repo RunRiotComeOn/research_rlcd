@@ -1,0 +1,83 @@
+{
+  "rows": {
+    "train": 20063,
+    "dev": 2000,
+    "test": 2000,
+    "holmes": 1837
+  },
+  "videos": {
+    "train": 16147,
+    "dev": 1595,
+    "test": 1608,
+    "holmes": 270
+  },
+  "all_pairwise_video_filename_overlaps": 0,
+  "selected_steps": {
+    "base_low": 20000,
+    "base_high": 20063,
+    "f0_low": 20063,
+    "f0_high": 20000
+  },
+  "contrasts": {
+    "test": {
+      "higher_lr_from_base": {
+        "brier_first_minus_second": 0.017842602808923295,
+        "video_bootstrap_95pct_interval": [
+          0.01294676474222829,
+          0.022921738708360333
+        ]
+      },
+      "higher_lr_from_f0": {
+        "brier_first_minus_second": 0.012705994322700323,
+        "video_bootstrap_95pct_interval": [
+          0.008112277525556008,
+          0.017432399349533636
+        ]
+      },
+      "f0_start_at_low_lr": {
+        "brier_first_minus_second": 0.007662799663933025,
+        "video_bootstrap_95pct_interval": [
+          0.0034566277327469485,
+          0.0117835798250501
+        ]
+      },
+      "f0_start_at_high_lr": {
+        "brier_first_minus_second": 0.0025261911777100525,
+        "video_bootstrap_95pct_interval": [
+          -0.0010488044909652643,
+          0.006158067326667667
+        ]
+      }
+    },
+    "holmes": {
+      "higher_lr_from_base": {
+        "brier_first_minus_second": 0.0274156415694282,
+        "video_bootstrap_95pct_interval": [
+          0.020810369557487867,
+          0.03400403288082637
+        ]
+      },
+      "higher_lr_from_f0": {
+        "brier_first_minus_second": 0.016202856630888857,
+        "video_bootstrap_95pct_interval": [
+          0.009687650230301761,
+          0.022855780071520455
+        ]
+      },
+      "f0_start_at_low_lr": {
+        "brier_first_minus_second": 0.023025172387429,
+        "video_bootstrap_95pct_interval": [
+          0.01789210656318421,
+          0.02798464073531489
+        ]
+      },
+      "f0_start_at_high_lr": {
+        "brier_first_minus_second": 0.011812387448889657,
+        "video_bootstrap_95pct_interval": [
+          0.006994065311267275,
+          0.016426409031862762
+        ]
+      }
+    }
+  }
+}
