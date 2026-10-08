@@ -1,4 +1,5 @@
 """Summarize selected joint model versus unmodified F0 and its Platt teacher."""
+import argparse
 import json
 import math
 from collections import defaultdict
@@ -47,14 +48,19 @@ def interval(rows, values, seed):
 
 
 def main():
-    selection = json.loads((EVAL/'selection.json').read_text())
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--grid',action='store_true')
+    args = parser.parse_args()
+    selection_name = 'selection_grid.json' if args.grid else 'selection.json'
+    selection = json.loads((EVAL/selection_name).read_text())
     chosen = selection['global_selection']
     variant, step = chosen['variant'], chosen['step']
+    suffix = ('_kl50' if args.grid and chosen['action_kl_weight']==50 else '')
     platt = json.loads(PLATT.read_text())
     result = {'selection':chosen,'data_rows':{'train':16063,'dev':2000,'test':2000,'holmes':1837},
               'results':{}}
     for split,expected in (('test',2000),('holmes',1837)):
-        base = EVAL / split / variant / f'examples_{step:05d}'
+        base = EVAL / split / f'{variant}{suffix}' / f'examples_{step:05d}'
         if (base/'STATUS.txt').read_text().strip() != f'COMPLETED {expected}':
             raise ValueError(f'Incomplete {split} result')
         student = read_jsonl(base/'predictions.jsonl')
@@ -86,7 +92,7 @@ def main():
             'joint_minus_f0_platt_brier':float(brier_delta.mean()),
             'brier_delta_video_bootstrap_95pct_interval':interval(student,brier_delta,20261008),
             'joint_constant_oracle_brier':float(y.mean()*(1-y.mean()))}
-    path = EVAL/'final_summary.json'
+    path = EVAL/('final_summary_grid.json' if args.grid else 'final_summary.json')
     path.write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
 

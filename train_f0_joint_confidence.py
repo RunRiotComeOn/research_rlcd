@@ -52,7 +52,10 @@ def main():
     parser.add_argument('--device', required=True)
     parser.add_argument('--resume', action='store_true')
     parser.add_argument('--smoke-examples', type=int, default=0)
+    parser.add_argument('--action-kl-weight', type=float, default=ACTION_KL_WEIGHT)
     args = parser.parse_args()
+    if args.action_kl_weight <= 0:
+        raise ValueError('Action KL weight must be positive')
     teacher_weight = LAMBDAS[args.variant]
     rows = [json.loads(s) for s in DATA.read_text(encoding='utf-8').splitlines()]
     actions = [json.loads(s) for s in ACTIONS.read_text(encoding='utf-8').splitlines()]
@@ -65,8 +68,10 @@ def main():
         assert 1 <= args.smoke_examples <= len(rows)
         rows = rows[:args.smoke_examples]
         actions = actions[:args.smoke_examples]
-    out_name = (f'f0joint_{args.variant}_smoke_{args.smoke_examples}'
-                if args.smoke_examples else f'f0joint_{args.variant}_v1')
+    suffix = ('' if args.action_kl_weight == ACTION_KL_WEIGHT
+              else f'_kl{args.action_kl_weight:g}')
+    out_name = (f'f0joint_{args.variant}{suffix}_smoke_{args.smoke_examples}'
+                if args.smoke_examples else f'f0joint_{args.variant}{suffix}_v1')
     out = ROOT / 'runs' / out_name
     if out.exists() and not args.resume:
         raise FileExistsError(out)
@@ -79,7 +84,7 @@ def main():
     cfg = yaml.safe_load((ROOT / 'config.yaml').read_text(encoding='utf-8'))
     platt = json.loads(PLATT.read_text())
     config = {'variant': args.variant, 'teacher_weight': teacher_weight,
-              'action_kl_weight': ACTION_KL_WEIGHT, 'max_lr': MAX_LR, 'min_lr': MIN_LR,
+              'action_kl_weight': args.action_kl_weight, 'max_lr': MAX_LR, 'min_lr': MIN_LR,
               'data': str(DATA), 'data_sha256': sha256(DATA),
               'actions_sha256': sha256(ACTIONS), 'teacher_sha256': sha256(PLATT),
               'f0_adapter': str(F0), 'f0_adapter_sha256': sha256(F0 / 'adapter_model.safetensors'),
@@ -149,7 +154,7 @@ def main():
                 platt['slope']*math.log(p/(1-p))+platt['intercept'],
                 dtype=torch.float32,device=args.device))
             teacher_loss = (q-teacher_q).square()
-            loss = brier+teacher_weight*teacher_loss+ACTION_KL_WEIGHT*action_kl
+            loss = brier+teacher_weight*teacher_loss+args.action_kl_weight*action_kl
             group_size = min(ACCUMULATE,total-((step-1)//ACCUMULATE)*ACCUMULATE)
             (loss/group_size).backward()
             running['brier'].append(float(brier.detach()))

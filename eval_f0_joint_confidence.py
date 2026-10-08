@@ -51,7 +51,11 @@ def main():
     parser.add_argument('--step',type=int,required=True)
     parser.add_argument('--device',required=True)
     parser.add_argument('--resume',action='store_true')
+    parser.add_argument('--action-kl-weight',type=float,default=5.0)
     args = parser.parse_args()
+    if args.action_kl_weight <= 0:
+        raise ValueError('Action KL weight must be positive')
+    suffix = '' if args.action_kl_weight == 5.0 else f'_kl{args.action_kl_weight:g}'
     if args.split == 'holmes':
         data = ROOT / 'data/jev_full_holmes_v1/holmes_all.jsonl'
         action_file = F0_HOLMES
@@ -62,7 +66,7 @@ def main():
         data = DATA / f'{args.split}.jsonl'
         action_file = DATA / f'{args.split}_actions.jsonl'
         expected = 2000
-    run = ROOT / 'runs' / f'f0joint_{args.variant}_v1'
+    run = ROOT / 'runs' / f'f0joint_{args.variant}{suffix}_v1'
     adapter = run / 'checkpoints' / f'examples_{args.step:05d}'
     if (adapter/'STATUS.txt').read_text().strip() != f'COMPLETED {args.step}':
         raise ValueError('Incomplete adapter checkpoint')
@@ -72,8 +76,9 @@ def main():
         raise ValueError('Data/F0 row mismatch')
     if any(a['source_answer_fold'] != 'fold0' for a in f0):
         raise ValueError('Reference answers are not F0')
-    out = EVAL / args.split / args.variant / f'examples_{args.step:05d}'
+    out = EVAL / args.split / f'{args.variant}{suffix}' / f'examples_{args.step:05d}'
     config = {'split':args.split,'variant':args.variant,'step':args.step,
+              'action_kl_weight':args.action_kl_weight,
               'data_sha256':sha256(data),'f0_actions_sha256':sha256(action_file),
               'adapter_sha256':sha256(adapter/'adapter_model.safetensors'),
               'device':args.device}
