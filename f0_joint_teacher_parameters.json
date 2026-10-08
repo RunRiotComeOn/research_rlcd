@@ -1,0 +1,10 @@
+{
+  "rows": 16063,
+  "source": "/pfs/hyx/videojev-rlcd/data/f0_joint_confidence_v1/train_actions.jsonl",
+  "source_sha256": "79144c7f52459ae470a457b356769aa0f263d94df2d6ef0bd79bdd71ba6903f6",
+  "slope": 0.8526915256934657,
+  "intercept": -0.04390355000121128,
+  "train_accuracy": 0.6887256427815477,
+  "train_brier": 0.16490591004032024,
+  "train_constant_oracle_brier": 0.21438263175669164
+}
