@@ -26,3 +26,19 @@ Keeping F0 fixed removes the earlier mismatch between half-data answer models us
 ## Reproducibility and audit
 
 The [audit script](audit_f0_confidence_ablation.py) independently verified 20,063 / 2,000 / 2,000 / 1,837 rows, zero pairwise video-filename overlaps among fold0, train, dev, sealed JeV test and Holmes, the same frozen F0 action for every variant, selected-checkpoint IDs, and recomputed Brier/AUC. The [selection record](f0_confidence_selection.json) lists all 24 development checkpoint scores. [Final metrics](f0_confidence_final_summary.json), [split manifest](f0_confidence_ablation_manifest.json) and [Platt fit](f0_confidence_platt_parameters.json) are compact and committed. Model weights, optimizer states and per-question predictions remain only in `/pfs/hyx/videojev-rlcd`.
+
+## Exploratory Platt calibration of the best confidence LoRA
+
+On 2026-10-08, fit a separate two-parameter Platt calibrator on the 2,000 development predictions of the best development-selected confidence adapter (`f0_high`, step 20,000). For a matched comparator, fit another Platt calibrator on the F0 chosen-answer probabilities from those exact development questions, using the same binary-cross-entropy objective and 1e-4 slope penalty. Both calibrators take the logit of their respective probability as input. No test labels enter either fit. This analysis is **exploratory**: the development labels had already selected the LoRA checkpoint, and the 2,000 test results had already been inspected.
+
+| Method on the same 2,000 JeV test questions | Brier ↓ | AUC ↑ | Ten-bin ECE ↓ |
+| --- | ---: | ---: | ---: |
+| Raw confidence LoRA | 0.17302 | 0.79683 | 0.03710 |
+| Development-fitted Platt(confidence LoRA) | 0.17182 | 0.79683 | 0.03898 |
+| Raw F0 answer probability | 0.16997 | 0.80026 | 0.03990 |
+| Development-fitted Platt(F0 answer probability) | **0.16827** | **0.80026** | **0.01648** |
+| Previous training-fitted Platt(F0 answer probability) | 0.16855 | 0.80026 | 0.02165 |
+
+Platt(LoRA) improves the raw LoRA Brier by 0.00120, but its Brier exceeds the matched Platt(answer probability) by **0.00355**. A 5,000-draw video-cluster bootstrap across the 1,608 test videos gives a 95% interval **[-0.00133, 0.00847]** for that difference. It does not establish that Platt(LoRA) is better; the point estimate favors answer probability. Fitted slope/intercept are 0.94283 / -0.05922 for LoRA and 0.91729 / -0.11061 for answer probability. Both slopes are positive, so each transformation preserves its input ranking and AUC. This test does not support a confidence advantage hidden solely by the LoRA's probability scale.
+
+The exact inputs, parameters and compact results are in [f0_lora_platt_exploratory_summary.json](f0_lora_platt_exploratory_summary.json); the reproducible analysis is [calibrate_f0_confidence_exploratory.py](calibrate_f0_confidence_exploratory.py). This analysis does not alter the ongoing joint-action/confidence experiment or its fresh test split.

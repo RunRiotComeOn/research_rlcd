@@ -1,0 +1,77 @@
+{
+  "exploratory": true,
+  "reason": "development labels already selected the adapter checkpoint; test results were previously inspected",
+  "variant": "f0_high",
+  "step": 20000,
+  "fit_rows": 2000,
+  "test_rows": 2000,
+  "test_videos": 1608,
+  "test_accuracy": 0.663,
+  "constant_oracle_brier": 0.223431,
+  "selection_sha256": "05fc9f8e734e6bdd4d91907eb57323ff1b9f1b8060310c1bcd0698f8c85f0f34",
+  "input_sha256": {
+    "dev": "9c532822ab27e3263b9af4bfe4df3f13b598a508bbee324428d00d53470202cf",
+    "test": "b3f4592fbef1e3b9d403de9817167016d8f0020827cd73e1915467516208d933"
+  },
+  "calibration_input": "logit(confidence or chosen-answer probability)",
+  "regularization": "1e-4 * slope^2; binary cross entropy fit",
+  "parameters": {
+    "lora": {
+      "slope": 0.9428325050247582,
+      "intercept": -0.059219071588174035,
+      "dev_fit_metrics": {
+        "brier": 0.16919525712533645,
+        "auc": 0.7951489762644854,
+        "ece_10_equal_width": 0.03155340946824102,
+        "mean_q": 0.6830000003133743
+      }
+    },
+    "answer_probability": {
+      "slope": 0.9172921671090621,
+      "intercept": -0.11061051259211792,
+      "dev_fit_metrics": {
+        "brier": 0.16166754449295007,
+        "auc": 0.8075611631741574,
+        "ece_10_equal_width": 0.020124945794071168,
+        "mean_q": 0.6830000000140635
+      }
+    }
+  },
+  "test_methods": {
+    "raw_lora": {
+      "brier": 0.1730198939861379,
+      "auc": 0.7968276559653763,
+      "ece_10_equal_width": 0.03710428741574287,
+      "mean_q": 0.6966695253551006
+    },
+    "dev_platt_lora": {
+      "brier": 0.17181978404153653,
+      "auc": 0.7968276559653763,
+      "ece_10_equal_width": 0.03897590760529465,
+      "mean_q": 0.6819284747944662
+    },
+    "raw_answer_probability": {
+      "brier": 0.16997025070382996,
+      "auc": 0.8002582452748275,
+      "ece_10_equal_width": 0.039897287011146525,
+      "mean_q": 0.7019661825895309
+    },
+    "dev_platt_answer_probability": {
+      "brier": 0.16827001381330772,
+      "auc": 0.8002582452748275,
+      "ece_10_equal_width": 0.01647701031932378,
+      "mean_q": 0.6788397971941553
+    },
+    "previous_train_platt_answer_probability": {
+      "brier": 0.16855463461036466,
+      "auc": 0.8002582452748275,
+      "ece_10_equal_width": 0.021650444197490924,
+      "mean_q": 0.684650444197491
+    }
+  },
+  "platt_lora_minus_platt_answer_brier": 0.0035497702282288016,
+  "video_bootstrap_95pct_interval": [
+    -0.0013302303033481324,
+    0.008473129151518204
+  ]
+}
