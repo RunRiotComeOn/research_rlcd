@@ -1,0 +1,441 @@
+{
+  "criterion": "min dev direct-mean-q Brier among checkpoints with >=99% F0 action agreement and no dev answer-accuracy loss; if none eligible, select min Brier for diagnosis only",
+  "dev_rows": 2000,
+  "min_action_agreement": 0.99,
+  "kl_weights": [
+    5,
+    50
+  ],
+  "teacher_weights": [
+    0,
+    0.5,
+    1
+  ],
+  "runs": {
+    "lam0": {
+      "variant": "lam0",
+      "action_kl_weight": 5,
+      "selected_step": 16000,
+      "selected_dev": {
+        "step": 16000,
+        "eligible": false,
+        "action_agreement_f0": 0.973,
+        "action_accuracy": 0.68,
+        "f0_action_accuracy": 0.679,
+        "brier": 0.17330598474794712,
+        "auc": 0.7842153033088235,
+        "ece": 0.021605931624770213
+      },
+      "any_eligible": false,
+      "trials": [
+        {
+          "step": 4000,
+          "eligible": false,
+          "action_agreement_f0": 0.9625,
+          "action_accuracy": 0.6795,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.1785314243614396,
+          "auc": 0.777599845715683,
+          "ece": 0.0528550091087818
+        },
+        {
+          "step": 8000,
+          "eligible": false,
+          "action_agreement_f0": 0.9645,
+          "action_accuracy": 0.6775,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17438609670808122,
+          "auc": 0.7846997911839584,
+          "ece": 0.03057919602096083
+        },
+        {
+          "step": 12000,
+          "eligible": false,
+          "action_agreement_f0": 0.9655,
+          "action_accuracy": 0.679,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17438435958543624,
+          "auc": 0.7842805298244164,
+          "ece": 0.03489882285892965
+        },
+        {
+          "step": 16000,
+          "eligible": false,
+          "action_agreement_f0": 0.973,
+          "action_accuracy": 0.68,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17330598474794712,
+          "auc": 0.7842153033088235,
+          "ece": 0.021605931624770213
+        },
+        {
+          "step": 16063,
+          "eligible": false,
+          "action_agreement_f0": 0.97,
+          "action_accuracy": 0.674,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.173367855797944,
+          "auc": 0.7882127123118093,
+          "ece": 0.022227565906941908
+        }
+      ]
+    },
+    "lam05": {
+      "variant": "lam05",
+      "action_kl_weight": 5,
+      "selected_step": 16063,
+      "selected_dev": {
+        "step": 16063,
+        "eligible": false,
+        "action_agreement_f0": 0.9675,
+        "action_accuracy": 0.6785,
+        "f0_action_accuracy": 0.679,
+        "brier": 0.17042548333102556,
+        "auc": 0.7939398384736251,
+        "ece": 0.03022359509766104
+      },
+      "any_eligible": false,
+      "trials": [
+        {
+          "step": 4000,
+          "eligible": false,
+          "action_agreement_f0": 0.958,
+          "action_accuracy": 0.6785,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17433789679803943,
+          "auc": 0.785122015790481,
+          "ece": 0.03055989572405818
+        },
+        {
+          "step": 8000,
+          "eligible": false,
+          "action_agreement_f0": 0.964,
+          "action_accuracy": 0.675,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17201533840216582,
+          "auc": 0.7912695156695156,
+          "ece": 0.031076057448983188
+        },
+        {
+          "step": 12000,
+          "eligible": false,
+          "action_agreement_f0": 0.9645,
+          "action_accuracy": 0.681,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17284289799977626,
+          "auc": 0.7856209060067483,
+          "ece": 0.027928765103220916
+        },
+        {
+          "step": 16000,
+          "eligible": false,
+          "action_agreement_f0": 0.9715,
+          "action_accuracy": 0.6795,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.1709639901417723,
+          "auc": 0.7916415552869355,
+          "ece": 0.027787840291857737
+        },
+        {
+          "step": 16063,
+          "eligible": false,
+          "action_agreement_f0": 0.9675,
+          "action_accuracy": 0.6785,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17042548333102556,
+          "auc": 0.7939398384736251,
+          "ece": 0.03022359509766104
+        }
+      ]
+    },
+    "lam1": {
+      "variant": "lam1",
+      "action_kl_weight": 5,
+      "selected_step": 16000,
+      "selected_dev": {
+        "step": 16000,
+        "eligible": false,
+        "action_agreement_f0": 0.971,
+        "action_accuracy": 0.679,
+        "f0_action_accuracy": 0.679,
+        "brier": 0.17034776265346013,
+        "auc": 0.7937972279190122,
+        "ece": 0.02872551698982713
+      },
+      "any_eligible": false,
+      "trials": [
+        {
+          "step": 4000,
+          "eligible": false,
+          "action_agreement_f0": 0.956,
+          "action_accuracy": 0.678,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17503574643158126,
+          "auc": 0.7818712325253303,
+          "ece": 0.03610690827667712
+        },
+        {
+          "step": 8000,
+          "eligible": false,
+          "action_agreement_f0": 0.954,
+          "action_accuracy": 0.6795,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.1711372995769375,
+          "auc": 0.7906847399723804,
+          "ece": 0.03602237729728218
+        },
+        {
+          "step": 12000,
+          "eligible": false,
+          "action_agreement_f0": 0.962,
+          "action_accuracy": 0.683,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17034854922596349,
+          "auc": 0.7926802795239042,
+          "ece": 0.029719426095485668
+        },
+        {
+          "step": 16000,
+          "eligible": false,
+          "action_agreement_f0": 0.971,
+          "action_accuracy": 0.679,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17034776265346013,
+          "auc": 0.7937972279190122,
+          "ece": 0.02872551698982713
+        },
+        {
+          "step": 16063,
+          "eligible": false,
+          "action_agreement_f0": 0.967,
+          "action_accuracy": 0.678,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17074385036431672,
+          "auc": 0.7927190402902216,
+          "ece": 0.02753693237900735
+        }
+      ]
+    },
+    "lam0_kl50": {
+      "variant": "lam0",
+      "action_kl_weight": 50,
+      "selected_step": 16000,
+      "selected_dev": {
+        "step": 16000,
+        "eligible": false,
+        "action_agreement_f0": 0.9735,
+        "action_accuracy": 0.681,
+        "f0_action_accuracy": 0.679,
+        "brier": 0.17786329547599133,
+        "auc": 0.7689238580549532,
+        "ece": 0.039703213065862636
+      },
+      "any_eligible": false,
+      "trials": [
+        {
+          "step": 4000,
+          "eligible": false,
+          "action_agreement_f0": 0.954,
+          "action_accuracy": 0.672,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.18585858453127815,
+          "auc": 0.7494465011614402,
+          "ece": 0.03387914991378785
+        },
+        {
+          "step": 8000,
+          "eligible": false,
+          "action_agreement_f0": 0.967,
+          "action_accuracy": 0.6735,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.1785270408220181,
+          "auc": 0.7729058164533289,
+          "ece": 0.036073169574141514
+        },
+        {
+          "step": 12000,
+          "eligible": false,
+          "action_agreement_f0": 0.9705,
+          "action_accuracy": 0.676,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17928693285611688,
+          "auc": 0.7704897636788662,
+          "ece": 0.03911844491958621
+        },
+        {
+          "step": 16000,
+          "eligible": false,
+          "action_agreement_f0": 0.9735,
+          "action_accuracy": 0.681,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17786329547599133,
+          "auc": 0.7689238580549532,
+          "ece": 0.039703213065862636
+        },
+        {
+          "step": 16063,
+          "eligible": false,
+          "action_agreement_f0": 0.973,
+          "action_accuracy": 0.678,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17841307087009992,
+          "auc": 0.7691694607816193,
+          "ece": 0.03729171389341355
+        }
+      ]
+    },
+    "lam05_kl50": {
+      "variant": "lam05",
+      "action_kl_weight": 50,
+      "selected_step": 8000,
+      "selected_dev": {
+        "step": 8000,
+        "eligible": false,
+        "action_agreement_f0": 0.964,
+        "action_accuracy": 0.6675,
+        "f0_action_accuracy": 0.679,
+        "brier": 0.17827126806883745,
+        "auc": 0.7781498690546591,
+        "ece": 0.04583790060877801
+      },
+      "any_eligible": false,
+      "trials": [
+        {
+          "step": 4000,
+          "eligible": false,
+          "action_agreement_f0": 0.964,
+          "action_accuracy": 0.673,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.18177618125747022,
+          "auc": 0.76118502665049,
+          "ece": 0.030849202275276162
+        },
+        {
+          "step": 8000,
+          "eligible": false,
+          "action_agreement_f0": 0.964,
+          "action_accuracy": 0.6675,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17827126806883745,
+          "auc": 0.7781498690546591,
+          "ece": 0.04583790060877801
+        },
+        {
+          "step": 12000,
+          "eligible": false,
+          "action_agreement_f0": 0.967,
+          "action_accuracy": 0.6755,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17889000403543276,
+          "auc": 0.7716648855667035,
+          "ece": 0.03208884640038009
+        },
+        {
+          "step": 16000,
+          "eligible": false,
+          "action_agreement_f0": 0.9705,
+          "action_accuracy": 0.675,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17831793386776235,
+          "auc": 0.7725310541310542,
+          "ece": 0.04131580543518067
+        },
+        {
+          "step": 16063,
+          "eligible": false,
+          "action_agreement_f0": 0.974,
+          "action_accuracy": 0.672,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.178412436446173,
+          "auc": 0.7746726644163762,
+          "ece": 0.0369128128737211
+        }
+      ]
+    },
+    "lam1_kl50": {
+      "variant": "lam1",
+      "action_kl_weight": 50,
+      "selected_step": 16063,
+      "selected_dev": {
+        "step": 16063,
+        "eligible": false,
+        "action_agreement_f0": 0.976,
+        "action_accuracy": 0.677,
+        "f0_action_accuracy": 0.679,
+        "brier": 0.1759303369350061,
+        "auc": 0.778667495918526,
+        "ece": 0.03839432963728906
+      },
+      "any_eligible": false,
+      "trials": [
+        {
+          "step": 4000,
+          "eligible": false,
+          "action_agreement_f0": 0.963,
+          "action_accuracy": 0.673,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17994978343309204,
+          "auc": 0.7659266782083964,
+          "ece": 0.037634008854627636
+        },
+        {
+          "step": 8000,
+          "eligible": false,
+          "action_agreement_f0": 0.968,
+          "action_accuracy": 0.673,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17864681631986976,
+          "auc": 0.7771526007515757,
+          "ece": 0.04708647933602333
+        },
+        {
+          "step": 12000,
+          "eligible": false,
+          "action_agreement_f0": 0.9705,
+          "action_accuracy": 0.677,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17763262194073087,
+          "auc": 0.7794380599164956,
+          "ece": 0.04521543025970459
+        },
+        {
+          "step": 16000,
+          "eligible": false,
+          "action_agreement_f0": 0.9755,
+          "action_accuracy": 0.677,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.17621001313532353,
+          "auc": 0.7790699269679107,
+          "ece": 0.03605054421722888
+        },
+        {
+          "step": 16063,
+          "eligible": false,
+          "action_agreement_f0": 0.976,
+          "action_accuracy": 0.677,
+          "f0_action_accuracy": 0.679,
+          "brier": 0.1759303369350061,
+          "auc": 0.778667495918526,
+          "ece": 0.03839432963728906
+        }
+      ]
+    }
+  },
+  "global_selection": {
+    "run": "lam1",
+    "variant": "lam1",
+    "action_kl_weight": 5,
+    "step": 16000,
+    "eligible": false,
+    "selected_dev": {
+      "step": 16000,
+      "eligible": false,
+      "action_agreement_f0": 0.971,
+      "action_accuracy": 0.679,
+      "f0_action_accuracy": 0.679,
+      "brier": 0.17034776265346013,
+      "auc": 0.7937972279190122,
+      "ece": 0.02872551698982713
+    }
+  }
+}

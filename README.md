@@ -6,6 +6,8 @@ The completed [full-JeV / full-Holmes experiment](JEV_FULL_HOLMES_REPORT.md) tra
 
 The later [frozen-F0 confidence ablation](F0_CONFIDENCE_ABLATION_REPORT.md) compared original-Qwen versus F0 initialization and 2e-6 versus 2e-5 learning rates while keeping the answer policy fixed. Both F0 initialization and higher learning rate helped. Its best development-selected confidence LoRA nearly matched Platt on sealed JeV and Holmes Brier, without establishing a Brier advantage.
 
+The [joint F0 action/confidence experiment](F0_JOINT_CONFIDENCE_REPORT.md) trained one LoRA to produce both outputs, testing three teacher weights and two action-KL strengths. None of 30 development checkpoints met the 99% F0 action-agreement gate. The diagnostic model's direct confidence Brier was 0.17324 on a newly reserved JeV test and 0.23390 on Holmes, worse than F0 plus train-fitted Platt (0.16550 and 0.22733). It is not promoted.
+
 ## Current JeV decision-model result
 
 The current inference baseline is the Qwen3.5-2B answer LoRA at `runs/jev10_action_sft_v1/checkpoints/step_4813`, with corrected `Action: <LETTER>` token scoring and Platt calibration fitted on the JeV validation split. The original answer LoRA was trained with a token-position mistake; see [the token audit and correction report](JEV10_DECISION_CONTEXT_REPORT.md).

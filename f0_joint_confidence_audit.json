@@ -1,0 +1,40 @@
+{
+  "rows": {
+    "train": 16063,
+    "dev": 2000,
+    "test": 2000,
+    "holmes": 1837,
+    "fold0": 24063
+  },
+  "videos": {
+    "train": 12950,
+    "dev": 1625,
+    "test": 1572,
+    "holmes": 270,
+    "fold0": 19473
+  },
+  "pairwise_video_filename_overlap": 0,
+  "pairwise_question_id_overlap": 0,
+  "development_checkpoints": 30,
+  "eligible_checkpoints": 0,
+  "diagnostic_selection": {
+    "run": "lam1",
+    "step": 16000
+  },
+  "final": {
+    "test": {
+      "rows": 2000,
+      "videos": 1572,
+      "action_agreement_f0": 0.965,
+      "joint_accuracy": 0.689,
+      "direct_q_brier": 0.17324213466646582
+    },
+    "holmes": {
+      "rows": 1837,
+      "videos": 270,
+      "action_agreement_f0": 0.9444746869896571,
+      "joint_accuracy": 0.43549265106151336,
+      "direct_q_brier": 0.23390012984093778
+    }
+  }
+}
